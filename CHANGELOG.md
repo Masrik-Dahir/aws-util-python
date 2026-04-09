@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 - Scoped CI workflows (`test.yml`, `coverage.yml`, `mutation.yml`) to run against the `s3` module only instead of the entire test suite
 - Added `scripts/` to `.gitignore`
+- Moved README author banner SVG to external file (`.github/banner.svg`) for GitHub rendering compatibility
 
 ## [2.2.6] - 2026-04-08
 

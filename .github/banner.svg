@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <!-- Style 5: Neon Grid -->
+  <rect width="800" height="120" rx="12" fill="#0a0a0a"/>
+
+  <!-- Animated dashed neon border -->
+  <rect x="4" y="4" width="792" height="112" rx="10" fill="none"
+        stroke="url(#neonGrad)" stroke-width="2" stroke-dasharray="12 6">
+    <animate attributeName="stroke-dashoffset" from="0" to="-36" dur="1.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <defs>
+    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF00FF"/>
+      <stop offset="50%" style="stop-color:#00FFFF"/>
+      <stop offset="100%" style="stop-color:#FF00FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Corner brackets — top left -->
+  <path d="M 24 16 L 24 28 M 24 16 L 36 16" stroke="#00FFFF" stroke-width="2" fill="none" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <!-- Corner brackets — top right -->
+  <path d="M 776 16 L 776 28 M 776 16 L 764 16" stroke="#FF00FF" stroke-width="2" fill="none" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin="0.75s" repeatCount="indefinite"/>
+  </path>
+  <!-- Corner brackets — bottom left -->
+  <path d="M 24 104 L 24 92 M 24 104 L 36 104" stroke="#FF00FF" stroke-width="2" fill="none" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+  </path>
+  <!-- Corner brackets — bottom right -->
+  <path d="M 776 104 L 776 92 M 776 104 L 764 104" stroke="#00FFFF" stroke-width="2" fill="none" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin="2.25s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Author name -->
+  <text x="400" y="52" font-family="'Segoe UI', system-ui, sans-serif" font-size="28"
+        font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">
+    Masrik Dahir
+    <animate attributeName="opacity" values="0;1" dur="0.8s" fill="freeze"/>
+  </text>
+
+  <!-- Website -->
+  <text x="400" y="82" font-family="'Segoe UI', system-ui, sans-serif" font-size="14"
+        fill="#00FFFF" text-anchor="middle" letter-spacing="1">
+    masrikdahir.com
+    <animate attributeName="opacity" values="0;1" begin="0.4s" dur="0.8s" fill="freeze"/>
+  </text>
+
+  <!-- Decorative grid dots -->
+  <circle cx="100" cy="30" r="1.5" fill="#FF00FF" opacity="0.3"/>
+  <circle cx="140" cy="30" r="1.5" fill="#FF00FF" opacity="0.3"/>
+  <circle cx="100" cy="50" r="1.5" fill="#FF00FF" opacity="0.3"/>
+  <circle cx="140" cy="50" r="1.5" fill="#FF00FF" opacity="0.3"/>
+  <circle cx="100" cy="70" r="1.5" fill="#FF00FF" opacity="0.3"/>
+  <circle cx="140" cy="70" r="1.5" fill="#FF00FF" opacity="0.3"/>
+  <circle cx="100" cy="90" r="1.5" fill="#FF00FF" opacity="0.3"/>
+  <circle cx="140" cy="90" r="1.5" fill="#FF00FF" opacity="0.3"/>
+
+  <circle cx="660" cy="30" r="1.5" fill="#00FFFF" opacity="0.3"/>
+  <circle cx="700" cy="30" r="1.5" fill="#00FFFF" opacity="0.3"/>
+  <circle cx="660" cy="50" r="1.5" fill="#00FFFF" opacity="0.3"/>
+  <circle cx="700" cy="50" r="1.5" fill="#00FFFF" opacity="0.3"/>
+  <circle cx="660" cy="70" r="1.5" fill="#00FFFF" opacity="0.3"/>
+  <circle cx="700" cy="70" r="1.5" fill="#00FFFF" opacity="0.3"/>
+  <circle cx="660" cy="90" r="1.5" fill="#00FFFF" opacity="0.3"/>
+  <circle cx="700" cy="90" r="1.5" fill="#00FFFF" opacity="0.3"/>
+</svg>

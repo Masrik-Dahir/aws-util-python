@@ -3,46 +3,10 @@
 
 <div align="center">
 
-<!-- Animated Author Banner -->
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#0f0c29"/>
-      <stop offset="50%" style="stop-color:#302b63"/>
-      <stop offset="100%" style="stop-color:#24243e"/>
-    </linearGradient>
-    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0"/>
-      <stop offset="50%" style="stop-color:#f5576c;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#4facfe;stop-opacity:0"/>
-    </linearGradient>
-  </defs>
-  <!-- Background -->
-  <rect width="800" height="120" rx="12" fill="url(#bg)"/>
-  <!-- Animated shimmer line -->
-  <rect y="115" height="3" rx="2" fill="url(#shine)" width="800">
-    <animate attributeName="x" from="-800" to="800" dur="2.5s" repeatCount="indefinite"/>
-  </rect>
-  <!-- Author name -->
-  <text x="400" y="52" font-family="'Segoe UI', system-ui, sans-serif" font-size="28"
-        font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="2">
-    Masrik Dahir
-    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
-  </text>
-  <!-- Website -->
-  <text x="400" y="82" font-family="'Segoe UI', system-ui, sans-serif" font-size="14"
-        fill="#a78bfa" text-anchor="middle" letter-spacing="1">
-    ✦ masrikdahir.com ✦
-    <animate attributeName="opacity" values="0;1" begin="0.5s" dur="1s" fill="freeze"/>
-  </text>
-  <!-- Decorative dots -->
-  <circle cx="60" cy="60" r="4" fill="#f093fb" opacity="0.6">
-    <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="740" cy="60" r="4" fill="#4facfe" opacity="0.6">
-    <animate attributeName="r" values="4;6;4" dur="2s" begin="1s" repeatCount="indefinite"/>
-  </circle>
-</svg>
+<!-- Animated Author Banner (external SVG so GitHub renders it) -->
+<a href="https://www.masrikdahir.com">
+  <img src=".github/banner.svg" alt="Masrik Dahir" width="800" />
+</a>
 
 **[🌐 masrikdahir.com](https://www.masrikdahir.com)** · **[GitHub](https://github.com/Masrik-Dahir)**
 
@@ -161,7 +125,6 @@ graph TB
 │   ├── 📄 observability.py        # Monitoring & logging
 │   └── 📄 ... (125+ more)        # All other service modules
 ├── 📁 tests/                      # 276 test files, 100% coverage
-├── 📁 scripts/                    # Code generation & tooling
 ├── 📁 .github/workflows/          # 20 CI/CD workflows
 ├── ⚙️ pyproject.toml              # Build config & task runner
 ├── ⚙️ Pipfile                     # Dependency management
@@ -173,7 +136,6 @@ graph LR
     Root["📦 aws-util"] --> Src["📁 src/aws_util"]
     Root --> Tests["🧪 tests (276 files)"]
     Root --> GH["📁 .github/workflows"]
-    Root --> Scripts["📁 scripts"]
     Src --> SyncMods["📄 135 sync modules"]
     Src --> AIO["📁 aio/"]
     AIO --> AsyncMods["📄 137 async modules"]
