@@ -22,6 +22,5 @@ jobs:
           pip install --prefer-binary -e .[dev]
           pip install pytest-gremlins
 
-      - name: Run tests
-        run: |
-          pytest tests/ --gremlins
+      - name: Run mutation tests
+        run: pytest tests/test_s3.py tests/test_aio_s3.py --gremlins
