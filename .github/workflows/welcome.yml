@@ -1,0 +1,37 @@
+name: Welcome
+
+on:
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  welcome:
+    name: Welcome New Contributors
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            Thanks for opening your first issue! We'll take a look soon.
+
+            In the meantime, please make sure you've included:
+            - A clear description of the issue
+            - Steps to reproduce (if it's a bug)
+            - The AWS service(s) involved
+            - Your Python and aws-util version
+          pr-message: |
+            Thanks for your first pull request! We appreciate your contribution to aws-util.
+
+            Please ensure:
+            - Tests pass (`pytest tests/ -v`)
+            - Linting passes (`ruff check src/ && ruff format --check src/`)
+            - Type checks pass (`mypy src/aws_util/`)
+            - CHANGELOG.md is updated
