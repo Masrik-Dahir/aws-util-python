@@ -46,6 +46,7 @@ pip-wheel-metadata/
 
 # ── Claude Code ─────────────────────────────────────────────
 .claude/
+.gitmodules
 
 # ── Secrets & credentials ────────────────────────────────────
 .env
