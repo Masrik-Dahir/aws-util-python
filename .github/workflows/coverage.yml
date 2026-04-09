@@ -20,4 +20,4 @@ jobs:
           pip install -e .[dev]
 
       - name: Run tests with coverage
-        run: pytest tests/test_s3.py tests/test_aio_s3.py --cov=src/aws_util/s3.py --cov=src/aws_util/aio/s3.py --cov-report=term-missing --cov-fail-under=100
+        run: pytest tests/test_s3.py tests/test_aio_s3.py --cov=aws_util.s3 --cov=aws_util.aio.s3 --cov-report=term-missing --cov-fail-under=100
