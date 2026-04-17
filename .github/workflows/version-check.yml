@@ -1,0 +1,42 @@
+name: Version Check
+
+on:
+  pull_request:
+    branches: [main, master]
+    paths:
+      - "pyproject.toml"
+
+jobs:
+  version-check:
+    name: Verify Version Bump
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Get version from PR
+        id: pr_version
+        run: |
+          VERSION=$(grep -oP '(?<=^version = ").*(?=")' pyproject.toml)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "PR version: $VERSION"
+
+      - name: Get version from base branch
+        id: base_version
+        run: |
+          git fetch origin ${{ github.base_ref }}
+          VERSION=$(git show origin/${{ github.base_ref }}:pyproject.toml | grep -oP '(?<=^version = ").*(?=")' || echo "0.0.0")
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Base version: $VERSION"
+
+      - name: Compare versions
+        run: |
+          PR="${{ steps.pr_version.outputs.version }}"
+          BASE="${{ steps.base_version.outputs.version }}"
+          if [ "$PR" = "$BASE" ]; then
+            echo "::warning::Version has not been bumped ($BASE -> $PR). Consider updating the version in pyproject.toml."
+          else
+            echo "Version bumped: $BASE -> $PR"
+          fi

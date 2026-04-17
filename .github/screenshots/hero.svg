@@ -1,0 +1,309 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <!-- Window chrome -->
+  <rect width="960" height="540" rx="8" fill="#1e1e2e"/>
+  <rect width="960" height="32" rx="8" fill="#181825"/>
+  <rect y="24" width="960" height="8" fill="#181825"/>
+  <!-- Window buttons -->
+  <circle cx="18" cy="16" r="6" fill="#f38ba8"/>
+  <circle cx="38" cy="16" r="6" fill="#f9e2af"/>
+  <circle cx="58" cy="16" r="6" fill="#a6e3a1"/>
+  <!-- Title -->
+  <text x="480" y="20" font-family="'Segoe UI',monospace" font-size="12" fill="#6c7086" text-anchor="middle">aws-util-python -- src/aws_util/ci_cd_ops.py</text>
+
+  <!-- Left sidebar: file explorer -->
+  <rect x="0" y="32" width="200" height="508" fill="#11111b"/>
+  <text x="12" y="52" font-family="monospace" font-size="10" fill="#89b4fa" font-weight="700">EXPLORER</text>
+  <!-- Folder tree -->
+  <text x="16" y="70" font-family="monospace" font-size="10" fill="#cdd6f4">v src/</text>
+  <text x="28" y="84" font-family="monospace" font-size="10" fill="#cdd6f4">v aws_util/</text>
+  <text x="40" y="98" font-family="monospace" font-size="10" fill="#6c7086">__init__.py</text>
+  <text x="40" y="112" font-family="monospace" font-size="10" fill="#6c7086">_client.py</text>
+  <text x="40" y="126" font-family="monospace" font-size="10" fill="#6c7086">exceptions.py</text>
+  <text x="40" y="140" font-family="monospace" font-size="10" fill="#a6e3a1">s3.py</text>
+  <text x="40" y="154" font-family="monospace" font-size="10" fill="#a6e3a1">sqs.py</text>
+  <text x="40" y="168" font-family="monospace" font-size="10" fill="#a6e3a1">dynamodb.py</text>
+  <text x="40" y="182" font-family="monospace" font-size="10" fill="#a6e3a1">lambda_.py</text>
+  <text x="40" y="196" font-family="monospace" font-size="10" fill="#f9e2af">ci_cd_ops.py</text>
+  <text x="40" y="210" font-family="monospace" font-size="10" fill="#a6e3a1">storage_ops.py</text>
+  <text x="40" y="224" font-family="monospace" font-size="10" fill="#a6e3a1">security_ops.py</text>
+  <text x="40" y="238" font-family="monospace" font-size="10" fill="#a6e3a1">ai_ml_pipelines.py</text>
+  <text x="40" y="252" font-family="monospace" font-size="10" fill="#a6e3a1">analytics_pipelines.py</text>
+  <text x="40" y="266" font-family="monospace" font-size="10" fill="#a6e3a1">iot_pipelines.py</text>
+  <text x="40" y="280" font-family="monospace" font-size="10" fill="#a6e3a1">cost_optimization.py</text>
+  <text x="40" y="294" font-family="monospace" font-size="10" fill="#a6e3a1">governance.py</text>
+  <text x="40" y="308" font-family="monospace" font-size="10" fill="#a6e3a1">finding_ops.py</text>
+  <text x="40" y="322" font-family="monospace" font-size="10" fill="#a6e3a1">deployment.py</text>
+  <text x="40" y="336" font-family="monospace" font-size="10" fill="#a6e3a1">networking.py</text>
+  <text x="40" y="350" font-family="monospace" font-size="10" fill="#a6e3a1">contact_center_ops.py</text>
+  <text x="40" y="364" font-family="monospace" font-size="10" fill="#a6e3a1">cache_ops.py</text>
+  <text x="40" y="378" font-family="monospace" font-size="10" fill="#a6e3a1">api_gateway_ops.py</text>
+  <text x="40" y="392" font-family="monospace" font-size="10" fill="#a6e3a1">media_processing.py</text>
+  <text x="40" y="406" font-family="monospace" font-size="10" fill="#a6e3a1">data_flow_etl.py</text>
+  <text x="40" y="420" font-family="monospace" font-size="10" fill="#a6e3a1">resilience.py</text>
+  <text x="40" y="434" font-family="monospace" font-size="10" fill="#a6e3a1">observability.py</text>
+  <text x="40" y="448" font-family="monospace" font-size="10" fill="#a6e3a1">config_loader.py</text>
+  <text x="40" y="462" font-family="monospace" font-size="10" fill="#a6e3a1">resource_ops.py</text>
+  <text x="40" y="476" font-family="monospace" font-size="10" fill="#6c7086">... 118+ more</text>
+  <text x="28" y="494" font-family="monospace" font-size="10" fill="#cdd6f4">v aio/</text>
+  <text x="40" y="508" font-family="monospace" font-size="10" fill="#6c7086">... async mirrors</text>
+
+  <!-- Main editor panel -->
+  <rect x="200" y="32" width="480" height="508" fill="#1e1e2e"/>
+
+  <!-- Tab bar -->
+  <rect x="200" y="32" width="480" height="24" fill="#181825"/>
+  <rect x="200" y="32" width="120" height="24" fill="#1e1e2e"/>
+  <text x="210" y="48" font-family="monospace" font-size="10" fill="#f9e2af">ci_cd_ops.py</text>
+  <rect x="320" y="32" width="100" height="24" fill="#181825"/>
+  <text x="330" y="48" font-family="monospace" font-size="10" fill="#6c7086">s3.py</text>
+  <rect x="420" y="32" width="130" height="24" fill="#181825"/>
+  <text x="430" y="48" font-family="monospace" font-size="10" fill="#6c7086">storage_ops.py</text>
+
+  <!-- Line numbers + code -->
+  <text x="210" y="76" font-family="monospace" font-size="10" fill="#45475a"> 1</text>
+  <text x="236" y="76" font-family="monospace" font-size="10" fill="#cba6f7">from</text>
+  <text x="268" y="76" font-family="monospace" font-size="10" fill="#cdd6f4"> botocore.exceptions </text>
+  <text x="404" y="76" font-family="monospace" font-size="10" fill="#cba6f7">import</text>
+  <text x="444" y="76" font-family="monospace" font-size="10" fill="#a6e3a1"> ClientError</text>
+
+  <text x="210" y="90" font-family="monospace" font-size="10" fill="#45475a"> 2</text>
+  <text x="236" y="90" font-family="monospace" font-size="10" fill="#cba6f7">from</text>
+  <text x="268" y="90" font-family="monospace" font-size="10" fill="#cdd6f4"> pydantic </text>
+  <text x="330" y="90" font-family="monospace" font-size="10" fill="#cba6f7">import</text>
+  <text x="370" y="90" font-family="monospace" font-size="10" fill="#a6e3a1"> BaseModel, ConfigDict</text>
+
+  <text x="210" y="104" font-family="monospace" font-size="10" fill="#45475a"> 3</text>
+  <text x="236" y="104" font-family="monospace" font-size="10" fill="#cba6f7">from</text>
+  <text x="268" y="104" font-family="monospace" font-size="10" fill="#cdd6f4"> aws_util._client </text>
+  <text x="386" y="104" font-family="monospace" font-size="10" fill="#cba6f7">import</text>
+  <text x="426" y="104" font-family="monospace" font-size="10" fill="#a6e3a1"> get_client</text>
+
+  <text x="210" y="118" font-family="monospace" font-size="10" fill="#45475a"> 4</text>
+  <text x="236" y="118" font-family="monospace" font-size="10" fill="#cba6f7">from</text>
+  <text x="268" y="118" font-family="monospace" font-size="10" fill="#cdd6f4"> aws_util.exceptions </text>
+  <text x="404" y="118" font-family="monospace" font-size="10" fill="#cba6f7">import</text>
+  <text x="444" y="118" font-family="monospace" font-size="10" fill="#a6e3a1"> wrap_aws_error</text>
+
+  <text x="210" y="132" font-family="monospace" font-size="10" fill="#45475a"> 5</text>
+
+  <text x="210" y="146" font-family="monospace" font-size="10" fill="#45475a"> 6</text>
+  <text x="236" y="146" font-family="monospace" font-size="10" fill="#cba6f7">class</text>
+  <text x="268" y="146" font-family="monospace" font-size="10" fill="#f9e2af"> CIDeployResult</text>
+  <text x="362" y="146" font-family="monospace" font-size="10" fill="#cdd6f4">(BaseModel):</text>
+
+  <text x="210" y="160" font-family="monospace" font-size="10" fill="#45475a"> 7</text>
+  <text x="252" y="160" font-family="monospace" font-size="10" fill="#a6adc8">model_config = ConfigDict(frozen=</text>
+  <text x="466" y="160" font-family="monospace" font-size="10" fill="#fab387">True</text>
+  <text x="490" y="160" font-family="monospace" font-size="10" fill="#a6adc8">)</text>
+
+  <text x="210" y="174" font-family="monospace" font-size="10" fill="#45475a"> 8</text>
+  <text x="252" y="174" font-family="monospace" font-size="10" fill="#cdd6f4">build_id: </text>
+  <text x="318" y="174" font-family="monospace" font-size="10" fill="#89b4fa">str</text>
+
+  <text x="210" y="188" font-family="monospace" font-size="10" fill="#45475a"> 9</text>
+  <text x="252" y="188" font-family="monospace" font-size="10" fill="#cdd6f4">build_status: </text>
+  <text x="342" y="188" font-family="monospace" font-size="10" fill="#89b4fa">str</text>
+
+  <text x="210" y="202" font-family="monospace" font-size="10" fill="#45475a">10</text>
+  <text x="252" y="202" font-family="monospace" font-size="10" fill="#cdd6f4">deployment_id: </text>
+  <text x="348" y="202" font-family="monospace" font-size="10" fill="#89b4fa">str</text>
+
+  <text x="210" y="216" font-family="monospace" font-size="10" fill="#45475a">11</text>
+  <text x="252" y="216" font-family="monospace" font-size="10" fill="#cdd6f4">deployment_status: </text>
+  <text x="372" y="216" font-family="monospace" font-size="10" fill="#89b4fa">str</text>
+
+  <text x="210" y="230" font-family="monospace" font-size="10" fill="#45475a">12</text>
+
+  <text x="210" y="244" font-family="monospace" font-size="10" fill="#45475a">13</text>
+  <text x="236" y="244" font-family="monospace" font-size="10" fill="#cba6f7">def</text>
+  <text x="260" y="244" font-family="monospace" font-size="10" fill="#89b4fa"> codebuild_triggered_deploy</text>
+  <text x="432" y="244" font-family="monospace" font-size="10" fill="#cdd6f4">(</text>
+
+  <text x="210" y="258" font-family="monospace" font-size="10" fill="#45475a">14</text>
+  <text x="252" y="258" font-family="monospace" font-size="10" fill="#cdd6f4">project_name: </text>
+  <text x="342" y="258" font-family="monospace" font-size="10" fill="#89b4fa">str</text>
+  <text x="362" y="258" font-family="monospace" font-size="10" fill="#cdd6f4">,</text>
+
+  <text x="210" y="272" font-family="monospace" font-size="10" fill="#45475a">15</text>
+  <text x="252" y="272" font-family="monospace" font-size="10" fill="#cdd6f4">source_bucket: </text>
+  <text x="348" y="272" font-family="monospace" font-size="10" fill="#89b4fa">str</text>
+  <text x="368" y="272" font-family="monospace" font-size="10" fill="#cdd6f4">,</text>
+
+  <text x="210" y="286" font-family="monospace" font-size="10" fill="#45475a">16</text>
+  <text x="252" y="286" font-family="monospace" font-size="10" fill="#cdd6f4">source_key: </text>
+  <text x="330" y="286" font-family="monospace" font-size="10" fill="#89b4fa">str</text>
+  <text x="350" y="286" font-family="monospace" font-size="10" fill="#cdd6f4">,</text>
+
+  <text x="210" y="300" font-family="monospace" font-size="10" fill="#45475a">17</text>
+  <text x="252" y="300" font-family="monospace" font-size="10" fill="#cdd6f4">application_name: </text>
+  <text x="372" y="300" font-family="monospace" font-size="10" fill="#89b4fa">str</text>
+  <text x="392" y="300" font-family="monospace" font-size="10" fill="#cdd6f4">,</text>
+
+  <text x="210" y="314" font-family="monospace" font-size="10" fill="#45475a">18</text>
+  <text x="252" y="314" font-family="monospace" font-size="10" fill="#cdd6f4">deployment_group_name: </text>
+  <text x="396" y="314" font-family="monospace" font-size="10" fill="#89b4fa">str</text>
+  <text x="416" y="314" font-family="monospace" font-size="10" fill="#cdd6f4">,</text>
+
+  <text x="210" y="328" font-family="monospace" font-size="10" fill="#45475a">19</text>
+  <text x="252" y="328" font-family="monospace" font-size="10" fill="#cdd6f4">region_name: </text>
+  <text x="336" y="328" font-family="monospace" font-size="10" fill="#89b4fa">str</text>
+  <text x="356" y="328" font-family="monospace" font-size="10" fill="#cdd6f4"> = </text>
+  <text x="372" y="328" font-family="monospace" font-size="10" fill="#a6e3a1">"us-east-1"</text>
+  <text x="444" y="328" font-family="monospace" font-size="10" fill="#cdd6f4">,</text>
+
+  <text x="210" y="342" font-family="monospace" font-size="10" fill="#45475a">20</text>
+  <text x="236" y="342" font-family="monospace" font-size="10" fill="#cdd6f4">) -> CIDeployResult:</text>
+
+  <text x="210" y="356" font-family="monospace" font-size="10" fill="#45475a">21</text>
+  <text x="252" y="356" font-family="monospace" font-size="10" fill="#6c7086">"""Start CodeBuild, poll, deploy via CodeDeploy."""</text>
+
+  <text x="210" y="370" font-family="monospace" font-size="10" fill="#45475a">22</text>
+  <text x="252" y="370" font-family="monospace" font-size="10" fill="#cdd6f4">cb = get_client(</text>
+  <text x="362" y="370" font-family="monospace" font-size="10" fill="#a6e3a1">"codebuild"</text>
+  <text x="434" y="370" font-family="monospace" font-size="10" fill="#cdd6f4">, region_name)</text>
+
+  <text x="210" y="384" font-family="monospace" font-size="10" fill="#45475a">23</text>
+  <text x="252" y="384" font-family="monospace" font-size="10" fill="#cdd6f4">cd = get_client(</text>
+  <text x="362" y="384" font-family="monospace" font-size="10" fill="#a6e3a1">"codedeploy"</text>
+  <text x="440" y="384" font-family="monospace" font-size="10" fill="#cdd6f4">, region_name)</text>
+
+  <text x="210" y="398" font-family="monospace" font-size="10" fill="#45475a">24</text>
+  <text x="252" y="398" font-family="monospace" font-size="10" fill="#cba6f7">try</text>
+  <text x="276" y="398" font-family="monospace" font-size="10" fill="#cdd6f4">:</text>
+
+  <text x="210" y="412" font-family="monospace" font-size="10" fill="#45475a">25</text>
+  <text x="268" y="412" font-family="monospace" font-size="10" fill="#cdd6f4">build = cb.start_build(</text>
+
+  <text x="210" y="426" font-family="monospace" font-size="10" fill="#45475a">26</text>
+  <text x="284" y="426" font-family="monospace" font-size="10" fill="#cdd6f4">projectName=project_name,</text>
+
+  <text x="210" y="440" font-family="monospace" font-size="10" fill="#45475a">27</text>
+  <text x="284" y="440" font-family="monospace" font-size="10" fill="#cdd6f4">sourceLocationOverride=</text>
+  <text x="446" y="440" font-family="monospace" font-size="10" fill="#a6e3a1">f"..."</text>
+
+  <text x="210" y="454" font-family="monospace" font-size="10" fill="#45475a">28</text>
+  <text x="268" y="454" font-family="monospace" font-size="10" fill="#cdd6f4">)</text>
+
+  <text x="210" y="468" font-family="monospace" font-size="10" fill="#45475a">29</text>
+  <text x="252" y="468" font-family="monospace" font-size="10" fill="#cba6f7">except</text>
+  <text x="292" y="468" font-family="monospace" font-size="10" fill="#f9e2af"> ClientError</text>
+  <text x="370" y="468" font-family="monospace" font-size="10" fill="#cba6f7"> as</text>
+  <text x="394" y="468" font-family="monospace" font-size="10" fill="#cdd6f4"> exc:</text>
+
+  <text x="210" y="482" font-family="monospace" font-size="10" fill="#45475a">30</text>
+  <text x="268" y="482" font-family="monospace" font-size="10" fill="#cba6f7">raise</text>
+  <text x="300" y="482" font-family="monospace" font-size="10" fill="#cdd6f4"> wrap_aws_error(exc)</text>
+  <text x="432" y="482" font-family="monospace" font-size="10" fill="#cba6f7"> from</text>
+  <text x="464" y="482" font-family="monospace" font-size="10" fill="#cdd6f4"> exc</text>
+
+  <!-- Right panel: Test results + coverage -->
+  <rect x="680" y="32" width="280" height="508" fill="#11111b"/>
+
+  <!-- Test Results header -->
+  <rect x="680" y="32" width="280" height="24" fill="#181825"/>
+  <text x="690" y="48" font-family="monospace" font-size="10" fill="#a6e3a1" font-weight="700">TEST RESULTS</text>
+  <text x="830" y="48" font-family="monospace" font-size="10" fill="#a6e3a1">275 passed</text>
+
+  <!-- Test output -->
+  <text x="690" y="72" font-family="monospace" font-size="9" fill="#a6e3a1">PASSED</text>
+  <text x="730" y="72" font-family="monospace" font-size="9" fill="#cdd6f4">test_ci_cd_ops::test_codebuild_deploy</text>
+
+  <text x="690" y="86" font-family="monospace" font-size="9" fill="#a6e3a1">PASSED</text>
+  <text x="730" y="86" font-family="monospace" font-size="9" fill="#cdd6f4">test_ci_cd_ops::test_approval_notify</text>
+
+  <text x="690" y="100" font-family="monospace" font-size="9" fill="#a6e3a1">PASSED</text>
+  <text x="730" y="100" font-family="monospace" font-size="9" fill="#cdd6f4">test_ci_cd_ops::test_pr_to_codebuild</text>
+
+  <text x="690" y="114" font-family="monospace" font-size="9" fill="#a6e3a1">PASSED</text>
+  <text x="730" y="114" font-family="monospace" font-size="9" fill="#cdd6f4">test_ci_cd_ops::test_pkg_promoter</text>
+
+  <text x="690" y="128" font-family="monospace" font-size="9" fill="#a6e3a1">PASSED</text>
+  <text x="730" y="128" font-family="monospace" font-size="9" fill="#cdd6f4">test_storage_ops::test_efs_sync</text>
+
+  <text x="690" y="142" font-family="monospace" font-size="9" fill="#a6e3a1">PASSED</text>
+  <text x="730" y="142" font-family="monospace" font-size="9" fill="#cdd6f4">test_storage_ops::test_fsx_backup</text>
+
+  <text x="690" y="156" font-family="monospace" font-size="9" fill="#a6e3a1">PASSED</text>
+  <text x="730" y="156" font-family="monospace" font-size="9" fill="#cdd6f4">test_ai_ml::test_face_indexer</text>
+
+  <text x="690" y="170" font-family="monospace" font-size="9" fill="#a6e3a1">PASSED</text>
+  <text x="730" y="170" font-family="monospace" font-size="9" fill="#cdd6f4">test_analytics::test_redshift_unload</text>
+
+  <text x="690" y="184" font-family="monospace" font-size="9" fill="#a6e3a1">PASSED</text>
+  <text x="730" y="184" font-family="monospace" font-size="9" fill="#cdd6f4">test_governance::test_scp_drift</text>
+
+  <text x="690" y="198" font-family="monospace" font-size="9" fill="#a6e3a1">PASSED</text>
+  <text x="730" y="198" font-family="monospace" font-size="9" fill="#cdd6f4">test_cost_opt::test_idle_stopper</text>
+
+  <text x="690" y="212" font-family="monospace" font-size="9" fill="#a6e3a1">PASSED</text>
+  <text x="730" y="212" font-family="monospace" font-size="9" fill="#cdd6f4">test_finding_ops::test_hub_router</text>
+
+  <text x="690" y="226" font-family="monospace" font-size="9" fill="#a6e3a1">PASSED</text>
+  <text x="730" y="226" font-family="monospace" font-size="9" fill="#cdd6f4">test_iot_pipelines::test_telemetry</text>
+
+  <text x="690" y="240" font-family="monospace" font-size="9" fill="#6c7086">... 263 more tests passed</text>
+
+  <!-- Divider -->
+  <line x1="690" y1="252" x2="950" y2="252" stroke="#313244" stroke-width="1"/>
+
+  <!-- Coverage section -->
+  <text x="690" y="270" font-family="monospace" font-size="10" fill="#89b4fa" font-weight="700">COVERAGE REPORT</text>
+
+  <text x="690" y="290" font-family="monospace" font-size="9" fill="#6c7086">Module                    Stmts   Miss  Cover</text>
+  <line x1="690" y1="294" x2="950" y2="294" stroke="#313244" stroke-width="0.5"/>
+
+  <text x="690" y="308" font-family="monospace" font-size="9" fill="#cdd6f4">ci_cd_ops.py               142      0</text>
+  <text x="910" y="308" font-family="monospace" font-size="9" fill="#a6e3a1">100%</text>
+
+  <text x="690" y="322" font-family="monospace" font-size="9" fill="#cdd6f4">storage_ops.py             168      0</text>
+  <text x="910" y="322" font-family="monospace" font-size="9" fill="#a6e3a1">100%</text>
+
+  <text x="690" y="336" font-family="monospace" font-size="9" fill="#cdd6f4">security_ops.py            195      0</text>
+  <text x="910" y="336" font-family="monospace" font-size="9" fill="#a6e3a1">100%</text>
+
+  <text x="690" y="350" font-family="monospace" font-size="9" fill="#cdd6f4">ai_ml_pipelines.py         287      0</text>
+  <text x="910" y="350" font-family="monospace" font-size="9" fill="#a6e3a1">100%</text>
+
+  <text x="690" y="364" font-family="monospace" font-size="9" fill="#cdd6f4">analytics_pipelines.py     342      0</text>
+  <text x="910" y="364" font-family="monospace" font-size="9" fill="#a6e3a1">100%</text>
+
+  <text x="690" y="378" font-family="monospace" font-size="9" fill="#cdd6f4">cost_optimization.py       210      0</text>
+  <text x="910" y="378" font-family="monospace" font-size="9" fill="#a6e3a1">100%</text>
+
+  <text x="690" y="392" font-family="monospace" font-size="9" fill="#cdd6f4">governance.py              124      0</text>
+  <text x="910" y="392" font-family="monospace" font-size="9" fill="#a6e3a1">100%</text>
+
+  <text x="690" y="406" font-family="monospace" font-size="9" fill="#cdd6f4">finding_ops.py             178      0</text>
+  <text x="910" y="406" font-family="monospace" font-size="9" fill="#a6e3a1">100%</text>
+
+  <text x="690" y="420" font-family="monospace" font-size="9" fill="#cdd6f4">iot_pipelines.py           156      0</text>
+  <text x="910" y="420" font-family="monospace" font-size="9" fill="#a6e3a1">100%</text>
+
+  <text x="690" y="434" font-family="monospace" font-size="9" fill="#cdd6f4">deployment.py              220      0</text>
+  <text x="910" y="434" font-family="monospace" font-size="9" fill="#a6e3a1">100%</text>
+
+  <text x="690" y="448" font-family="monospace" font-size="9" fill="#cdd6f4">networking.py              112      0</text>
+  <text x="910" y="448" font-family="monospace" font-size="9" fill="#a6e3a1">100%</text>
+
+  <text x="690" y="462" font-family="monospace" font-size="9" fill="#cdd6f4">s3.py                      385      0</text>
+  <text x="910" y="462" font-family="monospace" font-size="9" fill="#a6e3a1">100%</text>
+
+  <text x="690" y="476" font-family="monospace" font-size="9" fill="#6c7086">... 136 more modules at 100%</text>
+
+  <line x1="690" y1="484" x2="950" y2="484" stroke="#313244" stroke-width="0.5"/>
+
+  <text x="690" y="500" font-family="monospace" font-size="10" fill="#a6e3a1" font-weight="700">TOTAL</text>
+  <text x="830" y="500" font-family="monospace" font-size="10" fill="#a6e3a1">7,303 methods</text>
+
+  <text x="690" y="518" font-family="monospace" font-size="10" fill="#89b4fa" font-weight="700">148 modules</text>
+  <text x="800" y="518" font-family="monospace" font-size="10" fill="#6c7086">sync + async parity</text>
+
+  <!-- Status bar -->
+  <rect x="0" y="530" width="960" height="10" fill="#181825"/>
+  <text x="10" y="538" font-family="monospace" font-size="8" fill="#89b4fa">Python 3.12</text>
+  <text x="120" y="538" font-family="monospace" font-size="8" fill="#6c7086">UTF-8</text>
+  <text x="200" y="538" font-family="monospace" font-size="8" fill="#6c7086">Ln 13, Col 5</text>
+  <text x="340" y="538" font-family="monospace" font-size="8" fill="#a6e3a1">Ruff: OK</text>
+  <text x="430" y="538" font-family="monospace" font-size="8" fill="#a6e3a1">mypy: OK</text>
+  <text x="860" y="538" font-family="monospace" font-size="8" fill="#6c7086">aws-util v2.2.9</text>
+</svg>

@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <radialGradient id="glw-bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#03030a"/>
+    </radialGradient>
+    <radialGradient id="glw-mass" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a0030"/>
+      <stop offset="60%" stop-color="#0d0020"/>
+      <stop offset="100%" stop-color="#03030a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glw-glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glw-glow-sm">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep space background -->
+  <rect width="800" height="120" fill="url(#glw-bg)"/>
+
+  <!-- Distant star field -->
+  <circle cx="42" cy="11" r="0.8" fill="#ccc" opacity="0.5"/>
+  <circle cx="115" cy="31" r="0.6" fill="#aad" opacity="0.4"/>
+  <circle cx="203" cy="8" r="1" fill="#fff" opacity="0.6"/>
+  <circle cx="288" cy="22" r="0.7" fill="#cce" opacity="0.4"/>
+  <circle cx="340" cy="5" r="0.9" fill="#ddd" opacity="0.5"/>
+  <circle cx="460" cy="14" r="0.7" fill="#aac" opacity="0.4"/>
+  <circle cx="530" cy="7" r="1.1" fill="#fff" opacity="0.6"/>
+  <circle cx="612" cy="27" r="0.6" fill="#ccf" opacity="0.4"/>
+  <circle cx="698" cy="9" r="0.8" fill="#ddd" opacity="0.5"/>
+  <circle cx="760" cy="19" r="0.9" fill="#aad" opacity="0.4"/>
+  <circle cx="70" cy="98" r="0.7" fill="#bbd" opacity="0.3"/>
+  <circle cx="155" cy="108" r="0.9" fill="#cce" opacity="0.4"/>
+  <circle cx="250" cy="112" r="0.6" fill="#dde" opacity="0.3"/>
+  <circle cx="378" cy="103" r="0.8" fill="#bbb" opacity="0.4"/>
+  <circle cx="480" cy="116" r="0.7" fill="#cce" opacity="0.3"/>
+  <circle cx="580" cy="105" r="1" fill="#fff" opacity="0.5"/>
+  <circle cx="670" cy="110" r="0.6" fill="#aad" opacity="0.3"/>
+  <circle cx="745" cy="98" r="0.9" fill="#ddd" opacity="0.4"/>
+
+  <!-- Massive dark gravitational lens body (centre) -->
+  <ellipse cx="400" cy="60" rx="28" ry="28" fill="url(#glw-mass)"/>
+  <ellipse cx="400" cy="60" rx="16" ry="16" fill="#08001a" opacity="0.9"/>
+  <ellipse cx="400" cy="60" rx="7" ry="7" fill="#03000d"/>
+
+  <!-- Einstein ring (light bent all the way around) -->
+  <ellipse cx="400" cy="60" rx="38" ry="20" fill="none" stroke="#e8a020" stroke-width="1.4" stroke-dasharray="240" stroke-dashoffset="240" opacity="0.8" filter="url(#glw-glow)">
+    <animate attributeName="stroke-dashoffset" values="240;0;-240" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.85;0.2" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="400" cy="60" rx="38" ry="20" fill="none" stroke="#30d0f0" stroke-width="0.8" stroke-dasharray="240" stroke-dashoffset="120" opacity="0.6" filter="url(#glw-glow)">
+    <animate attributeName="stroke-dashoffset" values="120;-120;120" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.15;0.6" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Lensed arc top-left — amber ray curving around mass -->
+  <path d="M 80,30 Q 200,10 300,30 Q 360,42 390,52" fill="none" stroke="#e8a020" stroke-width="1.3" stroke-linecap="round" opacity="0" filter="url(#glw-glow)">
+    <animate attributeName="opacity" values="0;0.7;0.9;0.7;0" dur="5s" begin="0s" repeatCount="indefinite"/>
+  </path>
+  <!-- Traveling pulse on arc top-left -->
+  <circle cx="0" cy="0" r="2.5" fill="#ffcc44" opacity="0" filter="url(#glw-glow)">
+    <animateMotion path="M 80,30 Q 200,10 300,30 Q 360,42 390,52" dur="5s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0;0.9;0.9;0" dur="5s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Lensed arc top-right — amber ray curving out from mass -->
+  <path d="M 410,52 Q 440,42 500,30 Q 600,10 720,28" fill="none" stroke="#e8a020" stroke-width="1.3" stroke-linecap="round" opacity="0" filter="url(#glw-glow)">
+    <animate attributeName="opacity" values="0;0.7;0.9;0.7;0" dur="5s" begin="0s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="0" cy="0" r="2.5" fill="#ffcc44" opacity="0" filter="url(#glw-glow)">
+    <animateMotion path="M 410,52 Q 440,42 500,30 Q 600,10 720,28" dur="5s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0;0.9;0.9;0" dur="5s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Lensed arc bottom-left — cyan ray -->
+  <path d="M 80,90 Q 200,108 300,90 Q 360,76 390,68" fill="none" stroke="#30d0f0" stroke-width="1.1" stroke-linecap="round" opacity="0" filter="url(#glw-glow)">
+    <animate attributeName="opacity" values="0;0.6;0.85;0.6;0" dur="5s" begin="1.2s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="0" cy="0" r="2" fill="#60e8ff" opacity="0" filter="url(#glw-glow)">
+    <animateMotion path="M 80,90 Q 200,108 300,90 Q 360,76 390,68" dur="5s" begin="1.7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0;0.85;0.85;0" dur="5s" begin="1.7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Lensed arc bottom-right — cyan ray -->
+  <path d="M 410,68 Q 440,76 500,90 Q 600,108 720,90" fill="none" stroke="#30d0f0" stroke-width="1.1" stroke-linecap="round" opacity="0" filter="url(#glw-glow)">
+    <animate attributeName="opacity" values="0;0.6;0.85;0.6;0" dur="5s" begin="1.2s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="0" cy="0" r="2" fill="#60e8ff" opacity="0" filter="url(#glw-glow)">
+    <animateMotion path="M 410,68 Q 440,76 500,90 Q 600,108 720,90" dur="5s" begin="1.7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0;0.85;0.85;0" dur="5s" begin="1.7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Secondary fainter arc (violet, wider warp) top -->
+  <path d="M 140,18 Q 270,0 380,44" fill="none" stroke="#b060ff" stroke-width="0.8" stroke-linecap="round" opacity="0" filter="url(#glw-glow-sm)">
+    <animate attributeName="opacity" values="0;0.4;0.6;0.4;0" dur="7s" begin="2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 420,44 Q 530,0 660,18" fill="none" stroke="#b060ff" stroke-width="0.8" stroke-linecap="round" opacity="0" filter="url(#glw-glow-sm)">
+    <animate attributeName="opacity" values="0;0.4;0.6;0.4;0" dur="7s" begin="2s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Accretion disc shimmer rings -->
+  <ellipse cx="400" cy="60" rx="50" ry="12" fill="none" stroke="#e8a020" stroke-width="0.6" opacity="0">
+    <animate attributeName="opacity" values="0;0.3;0;0.3;0" dur="3.5s" begin="0.8s" repeatCount="indefinite"/>
+    <animate attributeName="rx" values="50;54;50" dur="3.5s" begin="0.8s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="400" cy="60" rx="60" ry="14" fill="none" stroke="#30d0f0" stroke-width="0.5" opacity="0">
+    <animate attributeName="opacity" values="0;0.2;0;0.2;0" dur="4.5s" begin="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="rx" values="60;65;60" dur="4.5s" begin="1.5s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Text overlay backdrop -->
+  <rect x="150" y="32" width="500" height="58" rx="8" fill="#000000" opacity="0.42"/>
+
+  <!-- Author name -->
+  <text x="400" y="57" font-family="'Segoe UI',sans-serif" font-size="27" font-weight="700"
+        fill="#f0e8d0" text-anchor="middle" letter-spacing="3">
+    Masrik Dahir
+    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+
+  <!-- Website -->
+  <text x="400" y="79" font-family="'Segoe UI',sans-serif" font-size="13"
+        fill="#e8a020" text-anchor="middle" letter-spacing="2">
+    ✦ masrikdahir.com ✦
+    <animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+</svg>

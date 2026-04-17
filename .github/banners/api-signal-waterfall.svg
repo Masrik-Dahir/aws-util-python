@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <linearGradient id="awf-bg-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#101820"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="awf-pulse-amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#fbbf24" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#fde68a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="awf-pulse-teal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#2dd4bf" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#99f6e4" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#14b8a6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="awf-pulse-violet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#a78bfa" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#ddd6fe" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="awf-pulse-rose" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e11d48" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#fb7185" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#fecdd3" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#e11d48" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="awf-glow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="awf-textglow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="awf-clip">
+      <rect x="0" y="0" width="800" height="120"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#awf-bg-grad)"/>
+
+  <!-- Waterfall track lines (static dimmed rails) -->
+  <line x1="0" y1="18" x2="800" y2="18" stroke="#1e293b" stroke-width="1"/>
+  <line x1="0" y1="36" x2="800" y2="36" stroke="#1e293b" stroke-width="1"/>
+  <line x1="0" y1="54" x2="800" y2="54" stroke="#1e293b" stroke-width="1"/>
+  <line x1="0" y1="72" x2="800" y2="72" stroke="#1e293b" stroke-width="1"/>
+  <line x1="0" y1="90" x2="800" y2="90" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Signal wave 1 — amber — row 18 — 80px wide pulse -->
+  <g clip-path="url(#awf-clip)" filter="url(#awf-glow)">
+    <rect x="-80" y="11" width="80" height="6" rx="3" fill="url(#awf-pulse-amber)">
+      <animate attributeName="x" from="-80" to="800" dur="2.8s" repeatCount="indefinite" begin="0s"/>
+    </rect>
+  </g>
+
+  <!-- Signal wave 2 — teal — row 36 — delay 0.7s -->
+  <g clip-path="url(#awf-clip)" filter="url(#awf-glow)">
+    <rect x="-80" y="29" width="80" height="6" rx="3" fill="url(#awf-pulse-teal)">
+      <animate attributeName="x" from="-80" to="800" dur="3.2s" repeatCount="indefinite" begin="0.7s"/>
+    </rect>
+  </g>
+
+  <!-- Signal wave 3 — violet — row 54 — delay 1.3s -->
+  <g clip-path="url(#awf-clip)" filter="url(#awf-glow)">
+    <rect x="-80" y="47" width="80" height="6" rx="3" fill="url(#awf-pulse-violet)">
+      <animate attributeName="x" from="-80" to="800" dur="2.5s" repeatCount="indefinite" begin="1.3s"/>
+    </rect>
+  </g>
+
+  <!-- Signal wave 4 — amber wider — row 72 — delay 0.4s -->
+  <g clip-path="url(#awf-clip)" filter="url(#awf-glow)">
+    <rect x="-120" y="65" width="120" height="6" rx="3" fill="url(#awf-pulse-amber)">
+      <animate attributeName="x" from="-120" to="800" dur="3.8s" repeatCount="indefinite" begin="0.4s"/>
+    </rect>
+  </g>
+
+  <!-- Signal wave 5 — rose — row 90 — delay 1.9s -->
+  <g clip-path="url(#awf-clip)" filter="url(#awf-glow)">
+    <rect x="-80" y="83" width="80" height="6" rx="3" fill="url(#awf-pulse-rose)">
+      <animate attributeName="x" from="-80" to="800" dur="2.2s" repeatCount="indefinite" begin="1.9s"/>
+    </rect>
+  </g>
+
+  <!-- Second pass — staggered echoes for density -->
+  <g clip-path="url(#awf-clip)" filter="url(#awf-glow)">
+    <rect x="-80" y="11" width="60" height="6" rx="3" fill="url(#awf-pulse-teal)">
+      <animate attributeName="x" from="-80" to="800" dur="2.8s" repeatCount="indefinite" begin="1.4s"/>
+    </rect>
+  </g>
+  <g clip-path="url(#awf-clip)" filter="url(#awf-glow)">
+    <rect x="-80" y="47" width="50" height="6" rx="3" fill="url(#awf-pulse-rose)">
+      <animate attributeName="x" from="-80" to="800" dur="3.5s" repeatCount="indefinite" begin="2.5s"/>
+    </rect>
+  </g>
+
+  <!-- Dark overlay behind text for contrast -->
+  <rect x="160" y="28" width="480" height="66" rx="10" fill="#000000" opacity="0.55"/>
+
+  <!-- Author name -->
+  <text x="400" y="58"
+        font-family="'Segoe UI', 'Helvetica Neue', sans-serif"
+        font-size="27" font-weight="700"
+        fill="#f8fafc" text-anchor="middle" letter-spacing="3"
+        filter="url(#awf-textglow)">
+    Masrik Dahir
+    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+
+  <!-- Website -->
+  <text x="400" y="82"
+        font-family="'Segoe UI', 'Helvetica Neue', sans-serif"
+        font-size="13" fill="#fbbf24" text-anchor="middle" letter-spacing="2">
+    ✦ masrikdahir.com ✦
+    <animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+</svg>

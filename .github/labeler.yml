@@ -1,0 +1,33 @@
+source:
+  - changed-files:
+      - any-glob-to-any-file: "src/**/*"
+
+tests:
+  - changed-files:
+      - any-glob-to-any-file: "tests/**/*"
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file: ".github/**/*"
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "*.md"
+          - "docs/**/*"
+
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "pyproject.toml"
+          - "requirements.txt"
+          - "Pipfile"
+          - "Pipfile.lock"
+
+services:
+  - changed-files:
+      - any-glob-to-any-file: "src/aws_util/*.py"
+
+async:
+  - changed-files:
+      - any-glob-to-any-file: "src/aws_util/aio/**/*"

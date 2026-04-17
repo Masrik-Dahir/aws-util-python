@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <linearGradient id="bpc-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#080d14"/>
+      <stop offset="50%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#080d14"/>
+    </linearGradient>
+    <linearGradient id="bpc-pipe" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a3a1a"/>
+      <stop offset="100%" stop-color="#1a3a1a"/>
+    </linearGradient>
+    <filter id="bpc-glow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bpc-glow-sm">
+      <feGaussianBlur stdDeviation="1" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#bpc-bg)"/>
+
+  <!-- Grid subtle lines -->
+  <line x1="0" y1="30" x2="800" y2="30" stroke="#1a2a3a" stroke-width="0.5" opacity="0.4"/>
+  <line x1="0" y1="60" x2="800" y2="60" stroke="#1a2a3a" stroke-width="0.5" opacity="0.4"/>
+  <line x1="0" y1="90" x2="800" y2="90" stroke="#1a2a3a" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Stage 1: SOURCE — left -->
+  <rect x="22" y="44" width="68" height="32" rx="5" fill="#0f1f10" stroke="#28a428" stroke-width="1.2">
+    <animate attributeName="stroke" values="#28a428;#50e050;#28a428" dur="3s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#0f1f10;#142814;#0f1f10" dur="3s" begin="0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="56" y="63" font-family="'Segoe UI',sans-serif" font-size="9" fill="#50e050" text-anchor="middle" letter-spacing="1">SOURCE</text>
+  <!-- Stage 1 status dot -->
+  <circle cx="77" cy="48" r="3" fill="#50e050" filter="url(#bpc-glow-sm)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Connector 1→2 -->
+  <line x1="90" y1="60" x2="136" y2="60" stroke="#1e3a1e" stroke-width="2"/>
+  <circle cx="0" cy="0" r="3" fill="#50e050" opacity="0" filter="url(#bpc-glow-sm)">
+    <animateMotion path="M 90,60 L 136,60" dur="3s" begin="0.3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="3s" begin="0.3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Stage 2: BUILD -->
+  <rect x="136" y="44" width="68" height="32" rx="5" fill="#0f1f10" stroke="#28a428" stroke-width="1.2">
+    <animate attributeName="stroke" values="#28a428;#50e050;#28a428" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#0f1f10;#142814;#0f1f10" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+  </rect>
+  <text x="170" y="63" font-family="'Segoe UI',sans-serif" font-size="9" fill="#50e050" text-anchor="middle" letter-spacing="1">BUILD</text>
+  <circle cx="191" cy="48" r="3" fill="#50e050" filter="url(#bpc-glow-sm)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Connector 2→3 -->
+  <line x1="204" y1="60" x2="250" y2="60" stroke="#3a2a0e" stroke-width="2"/>
+  <circle cx="0" cy="0" r="3" fill="#f0a020" opacity="0" filter="url(#bpc-glow-sm)">
+    <animateMotion path="M 204,60 L 250,60" dur="3s" begin="1.0s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="3s" begin="1.0s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Stage 3: TEST -->
+  <rect x="250" y="44" width="68" height="32" rx="5" fill="#1f1a08" stroke="#d08820" stroke-width="1.2">
+    <animate attributeName="stroke" values="#d08820;#f0c840;#d08820" dur="3s" begin="1.2s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#1f1a08;#2a2010;#1f1a08" dur="3s" begin="1.2s" repeatCount="indefinite"/>
+  </rect>
+  <text x="284" y="63" font-family="'Segoe UI',sans-serif" font-size="9" fill="#f0a020" text-anchor="middle" letter-spacing="1">TEST</text>
+  <circle cx="305" cy="48" r="3" fill="#f0c840" filter="url(#bpc-glow-sm)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.2s" begin="0.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Connector 3→4 -->
+  <line x1="318" y1="60" x2="364" y2="60" stroke="#2a1a3a" stroke-width="2"/>
+  <circle cx="0" cy="0" r="3" fill="#c060ff" opacity="0" filter="url(#bpc-glow-sm)">
+    <animateMotion path="M 318,60 L 364,60" dur="3s" begin="1.7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="3s" begin="1.7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Stage 4: SCAN (security) -->
+  <rect x="364" y="44" width="68" height="32" rx="5" fill="#14081f" stroke="#9040d0" stroke-width="1.2">
+    <animate attributeName="stroke" values="#9040d0;#c060ff;#9040d0" dur="3s" begin="1.8s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#14081f;#1e0e30;#14081f" dur="3s" begin="1.8s" repeatCount="indefinite"/>
+  </rect>
+  <text x="398" y="63" font-family="'Segoe UI',sans-serif" font-size="9" fill="#c060ff" text-anchor="middle" letter-spacing="1">SCAN</text>
+  <circle cx="419" cy="48" r="3" fill="#c060ff" filter="url(#bpc-glow-sm)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Connector 4→5 -->
+  <line x1="432" y1="60" x2="478" y2="60" stroke="#1e3a1e" stroke-width="2"/>
+  <circle cx="0" cy="0" r="3" fill="#50e050" opacity="0" filter="url(#bpc-glow-sm)">
+    <animateMotion path="M 432,60 L 478,60" dur="3s" begin="2.3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="3s" begin="2.3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Stage 5: PACKAGE -->
+  <rect x="478" y="44" width="68" height="32" rx="5" fill="#0f1f10" stroke="#28a428" stroke-width="1.2">
+    <animate attributeName="stroke" values="#28a428;#50e050;#28a428" dur="3s" begin="2.4s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#0f1f10;#142814;#0f1f10" dur="3s" begin="2.4s" repeatCount="indefinite"/>
+  </rect>
+  <text x="512" y="63" font-family="'Segoe UI',sans-serif" font-size="9" fill="#50e050" text-anchor="middle" letter-spacing="0.5">PACKAGE</text>
+  <circle cx="533" cy="48" r="3" fill="#50e050" filter="url(#bpc-glow-sm)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="1.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Connector 5→6 -->
+  <line x1="546" y1="60" x2="592" y2="60" stroke="#3a2a0e" stroke-width="2"/>
+  <circle cx="0" cy="0" r="3" fill="#f0a020" opacity="0" filter="url(#bpc-glow-sm)">
+    <animateMotion path="M 546,60 L 592,60" dur="3s" begin="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="3s" begin="2.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Stage 6: DEPLOY -->
+  <rect x="592" y="44" width="68" height="32" rx="5" fill="#1f1208" stroke="#e06010" stroke-width="1.5">
+    <animate attributeName="stroke" values="#e06010;#ff9040;#e06010" dur="2.5s" begin="3s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#1f1208;#2a1a08;#1f1208" dur="2.5s" begin="3s" repeatCount="indefinite"/>
+  </rect>
+  <text x="626" y="63" font-family="'Segoe UI',sans-serif" font-size="9" fill="#ff9040" text-anchor="middle" letter-spacing="1">DEPLOY</text>
+  <circle cx="647" cy="48" r="3.5" fill="#ff9040" filter="url(#bpc-glow)">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" begin="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Connector 6→SUCCESS -->
+  <line x1="660" y1="60" x2="695" y2="60" stroke="#1e3a1e" stroke-width="2"/>
+  <circle cx="0" cy="0" r="3" fill="#50e050" opacity="0" filter="url(#bpc-glow)">
+    <animateMotion path="M 660,60 L 695,60" dur="3s" begin="3.4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="3s" begin="3.4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Stage 7: LIVE checkmark -->
+  <circle cx="715" cy="60" r="18" fill="#0f1f10" stroke="#50e050" stroke-width="1.8" filter="url(#bpc-glow-sm)">
+    <animate attributeName="stroke-width" values="1.8;3;1.8" dur="2s" begin="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="stroke" values="#50e050;#a0ff80;#50e050" dur="2s" begin="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M 705,60 L 712,67 L 726,53" fill="none" stroke="#50e050" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#bpc-glow)">
+    <animate attributeName="stroke" values="#50e050;#a0ff80;#50e050" dur="2s" begin="3.5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Build artifact dots above pipeline -->
+  <circle cx="150" cy="34" r="3" fill="#50e050" opacity="0" filter="url(#bpc-glow-sm)">
+    <animateMotion path="M 0,0 L 440,0" dur="6s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.7;0.7;0" dur="6s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="150" cy="34" r="2.5" fill="#f0a020" opacity="0" filter="url(#bpc-glow-sm)">
+    <animateMotion path="M 0,0 L 440,0" dur="6s" begin="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.7;0.7;0" dur="6s" begin="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Text backdrop -->
+  <rect x="0" y="0" width="800" height="38" fill="#080d14" opacity="0.6"/>
+  <rect x="0" y="82" width="800" height="38" fill="#080d14" opacity="0.6"/>
+
+  <!-- Project name -->
+  <text x="400" y="24" font-family="'Segoe UI',sans-serif" font-size="18" font-weight="700"
+        fill="#e8f8e8" text-anchor="middle" letter-spacing="4">
+    aws-util-python
+    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+
+  <!-- Tagline -->
+  <text x="400" y="108" font-family="'Segoe UI',sans-serif" font-size="10.5"
+        fill="#50c050" text-anchor="middle" letter-spacing="1.5">
+    Multi-service AWS orchestration — sync &amp; async, batteries included
+    <animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+</svg>

@@ -1,0 +1,80 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+boto3 = "*"
+botocore = "*"
+pydantic = ">=2.0"
+cryptography = ">=42.0"
+aiohttp = ">=3.9"
+task = "*"
+
+[dev-packages]
+taskipy = "*"
+build = "*"
+twine = "*"
+pytest = "*"
+requests = "*"
+pytest-cov = "*"
+pytest-asyncio = "*"
+pytest-gremlins = "*"
+moto = {extras = [
+    "s3", "s3crc32c",
+    "sqs", "sns",
+    "dynamodb", "dynamodbstreams",
+    "ssm",
+    "awslambda",
+    "events",
+    "cloudformation",
+    "stepfunctions",
+    "glue",
+    "cognitoidp",
+    "apigateway", "apigatewayv2",
+    "batch",
+    "autoscaling",
+    "eks",
+    "elasticbeanstalk",
+    "apprunner",
+    "cloudfront",
+    "rds",
+    "neptune",
+    "keyspaces"
+], version = "*"}
+black = "*"
+ruff = "*"
+mypy = "*"
+boto3-stubs = {extras = [
+    "s3", "sqs", "sns", "dynamodb", "ssm", "secretsmanager",
+    "lambda", "cloudwatch", "logs", "sts", "events", "kms",
+    "ec2", "rds", "ecs", "ecr", "iam", "cognito-idp",
+    "route53", "acm", "stepfunctions", "cloudformation",
+    "kinesis", "firehose", "ses", "sesv2", "glue", "athena",
+    "bedrock-runtime", "bedrock", "bedrock-agent",
+    "rekognition", "textract", "comprehend", "translate",
+    "polly", "transcribe", "forecast",
+    "personalize", "personalize-events", "personalize-runtime",
+    "apigateway", "apigatewayv2", "lakeformation",
+    "sagemaker", "ce", "guardduty", "config", "backup",
+    "application-autoscaling", "redshift",
+    "accessanalyzer", "codedeploy", "cloudtrail",
+    "iot", "iot-data-plane", "timestream-write",
+    "iotsitewise", "greengrassv2",
+    "inspector2", "macie2", "detective",
+    "securityhub", "sso-admin", "organizations",
+    "codebuild", "codepipeline", "codecommit", "codeartifact",
+    "datasync", "fsx", "transfer", "storagegateway", "lightsail",
+    "connect", "databrew", "elasticache", "elbv2",
+    "emr-serverless", "ivs", "lexv2-runtime", "mediaconvert",
+    "memorydb", "neptune-graph", "opensearchserverless",
+    "quicksight", "redshift-data", "timestream-query",
+    "shield", "wafv2", "support",
+    "vpc-lattice", "kinesisanalyticsv2", "dms", "health", "service-quotas",
+    "apprunner", "batch", "autoscaling", "eks", "elasticbeanstalk",
+    "cloudfront", "kafka", "appconfigdata", "keyspaces", "neptune",
+    "kafka"
+], version = "*"}
+
+[requires]
+python_version = "3.12"

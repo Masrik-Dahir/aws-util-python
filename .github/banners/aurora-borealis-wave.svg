@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <linearGradient id="aurora-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030812"/>
+      <stop offset="100%" stop-color="#060e22"/>
+    </linearGradient>
+    <linearGradient id="aurora-g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00ffa3" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#00ffa3" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#00ffa3" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="aurora-g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#7c3aed" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="aurora-g3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#06b6d4" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="aurora-g4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#f97316" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="aurora-blur">
+      <feGaussianBlur stdDeviation="3 8"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#aurora-bg)"/>
+
+  <!-- Stars -->
+  <circle cx="30" cy="8" r="1" fill="#ffffff" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3.1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="120" cy="15" r="0.8" fill="#ffffff" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="4.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="250" cy="6" r="1.1" fill="#ffffff" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="480" cy="10" r="0.9" fill="#ffffff" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3.7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="640" cy="7" r="1" fill="#ffffff" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.15;0.6" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="760" cy="12" r="0.8" fill="#ffffff" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Aurora band 1 — green curtain -->
+  <path d="M-50,20 C100,5 200,45 350,20 S550,10 850,30" stroke="url(#aurora-g1)" stroke-width="28" fill="none" filter="url(#aurora-blur)">
+    <animate attributeName="d"
+      values="M-50,20 C100,5 200,45 350,20 S550,10 850,30;
+              M-50,28 C80,10 220,38 370,15 S580,25 850,22;
+              M-50,15 C120,35 180,8 340,28 S530,18 850,35;
+              M-50,20 C100,5 200,45 350,20 S550,10 850,30"
+      dur="7s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Aurora band 2 — purple curtain -->
+  <path d="M-50,35 C150,15 300,60 450,35 S650,20 850,45" stroke="url(#aurora-g2)" stroke-width="22" fill="none" filter="url(#aurora-blur)">
+    <animate attributeName="d"
+      values="M-50,35 C150,15 300,60 450,35 S650,20 850,45;
+              M-50,42 C130,25 280,50 460,28 S670,38 850,38;
+              M-50,28 C170,40 260,12 440,42 S620,30 850,52;
+              M-50,35 C150,15 300,60 450,35 S650,20 850,45"
+      dur="9s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Aurora band 3 — cyan curtain -->
+  <path d="M-50,50 C200,30 350,75 500,50 S700,35 850,58" stroke="url(#aurora-g3)" stroke-width="18" fill="none" filter="url(#aurora-blur)">
+    <animate attributeName="d"
+      values="M-50,50 C200,30 350,75 500,50 S700,35 850,58;
+              M-50,58 C180,42 320,65 510,42 S720,50 850,50;
+              M-50,44 C220,55 300,28 490,58 S680,44 850,64;
+              M-50,50 C200,30 350,75 500,50 S700,35 850,58"
+      dur="11s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Aurora band 4 — amber accent -->
+  <path d="M-50,65 C250,48 400,85 560,62 S740,52 850,70" stroke="url(#aurora-g4)" stroke-width="14" fill="none" filter="url(#aurora-blur)">
+    <animate attributeName="d"
+      values="M-50,65 C250,48 400,85 560,62 S740,52 850,70;
+              M-50,72 C230,58 380,75 570,55 S760,65 850,62;
+              M-50,58 C270,70 360,40 550,70 S720,60 850,78;
+              M-50,65 C250,48 400,85 560,62 S740,52 850,70"
+      dur="8s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Text overlay background -->
+  <rect x="180" y="32" width="440" height="58" rx="10" fill="#000000" opacity="0.45"/>
+
+  <!-- Author text -->
+  <text x="400" y="58" font-family="'Segoe UI',sans-serif" font-size="27" font-weight="700"
+        fill="#e2f8ef" text-anchor="middle" letter-spacing="3">
+    Masrik Dahir<animate attributeName="opacity" values="0;1" dur="1.2s" fill="freeze"/>
+  </text>
+  <text x="400" y="80" font-family="'Segoe UI',sans-serif" font-size="13"
+        fill="#00ffa3" text-anchor="middle" letter-spacing="2">
+    ✦ masrikdahir.com ✦<animate attributeName="opacity" values="0;1" begin="0.7s" dur="0.9s" fill="freeze"/>
+  </text>
+</svg>

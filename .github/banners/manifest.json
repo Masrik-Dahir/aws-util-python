@@ -1,0 +1,284 @@
+{
+  "used": [
+    {
+      "slug": "circuit-trace-pulse",
+      "description": "PCB circuit traces with animated data pulses flowing through junctions, cyan/orange/purple signals on dark substrate",
+      "file": ".github/banners/circuit-trace-pulse.svg",
+      "created": "2026-04-14",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "service-mesh-nebula",
+      "description": "Two star clusters representing AWS services connected by mesh edges with traveling pulses, set in a cosmic nebula",
+      "file": ".github/banners/service-mesh-nebula.svg",
+      "created": "2026-04-14",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "api-signal-waterfall",
+      "description": "Stacked horizontal signal bars representing API request/response waves rippling as a waterfall, amber/teal/violet/rose pulses on charcoal",
+      "file": ".github/banners/api-signal-waterfall.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "cloud-orbit-ring",
+      "description": "Orbital ring paths with glowing service nodes spinning at different speeds around a central AWS cloud symbol, blue/violet on deep space",
+      "file": ".github/banners/cloud-orbit-ring.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "quantum-foam-lattice",
+      "description": "Hexagonal lattice of quantum nodes flickering with teal/purple/white probability pulses on deep dark background",
+      "file": ".github/banners/quantum-foam-lattice.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "data-pipeline-conveyor",
+      "description": "ETL conveyor belt with amber/green/blue data blocks flowing through INGEST/TRANSFORM/LOAD stage panels on dark slate",
+      "file": ".github/banners/data-pipeline-conveyor.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "api-wave-diffraction",
+      "description": "HTTP request waves diffracting through a slit aperture \u00e2\u20ac\u201d physics-inspired interference pattern with constructive/destructive nodes, cyan/purple/green on dark",
+      "file": ".github/banners/api-wave-diffraction.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "lambda-invocation-cascade",
+      "description": "Lambda function nodes lighting up in a cascade \u00e2\u20ac\u201d event triggers fan-out to Lambda nodes to AWS service nodes with animated pulse dots on edges and result indicators",
+      "file": ".github/banners/lambda-invocation-cascade.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "magnetic-field-lines",
+      "description": "Animated magnetic field arc lines curving from N to S poles with glowing flux particles traveling along field lines, amber/cyan/purple on deep charcoal",
+      "file": ".github/banners/magnetic-field-lines.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "token-bucket-fill",
+      "description": "Three rate-limit token buckets (req/s, burst, quota) filling with cyan/green/purple liquid with overflow drip tokens and traveling request circles flowing into each bucket",
+      "file": ".github/banners/token-bucket-fill.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "sdk-dependency-tree",
+      "description": "SDK dependency tree unfurling from root \u00e2\u20ac\u201d nodes light up outward with animated edges and travelling signal dots on teal/cyan palette",
+      "file": ".github/banners/sdk-dependency-tree.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "mycelium-network-grow",
+      "description": "Bioluminescent mycelium threads sprouting and connecting with traveling spore pulse particles, green/cyan on near-black",
+      "file": ".github/banners/mycelium-network-grow.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "voronoi-cell-expansion",
+      "description": "Voronoi cells expanding from seed points with pulsing edges and ring expansions in teal/amber/violet on dark slate",
+      "file": ".github/banners/voronoi-cell-expansion.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "sonar-ping-sweep",
+      "description": "Sonar-style expanding ping rings from a left emitter with echoed AWS service dots (S3, DynamoDB, IoT, SNS, Lambda) materialising at range, cyan/blue on deep navy",
+      "file": ".github/banners/sonar-ping-sweep.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "iot-sensor-heatmap",
+      "description": "Grid of IoT sensor cells cycling through cool-blue to warm-amber to hot-orange temperature colours representing real-time telemetry data flanking project name on dark background",
+      "file": ".github/banners/iot-sensor-heatmap.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "neuron-synapse-fire",
+      "description": "Neuron soma bodies with dendrite branches and axon paths; amber/cyan/violet signal pulses traveling along nerve fibres to synaptic terminals with flash rings on deep charcoal",
+      "file": ".github/banners/neuron-synapse-fire.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "radar-ping-sweep",
+      "description": "Dual phosphor-green radar scopes with rotating sweep arms, blips appearing on scan, and a ping dot traveling the center connector line on deep slate",
+      "file": ".github/banners/radar-ping-sweep.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "sonar-pulse-sweep",
+      "description": "Sonar origin points on left and right emit expanding ring pulses with rotating scan beams and ping blips detecting targets, cyan/green on deep navy",
+      "file": ".github/banners/sonar-pulse-sweep.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "cost-graph-bloom",
+      "description": "Bar chart of AWS service costs blooming upward with trend line, plus a Savings Plan coverage donut arc on the right, green/blue/amber/purple",
+      "file": ".github/banners/cost-graph-bloom.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "fiber-optic-burst",
+      "description": "Fiber optic strands bursting from a central core with cyan/blue photon pulses on the left and amber/violet on the right, traveling light dots along each strand",
+      "file": ".github/banners/fiber-optic-burst.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "compliance-matrix-sweep",
+      "description": "Compliance matrix grids flanking center text with animated pass/fail indicators (green checkmarks, red X marks) and a green sweep bar traversing each grid",
+      "file": ".github/banners/compliance-matrix-sweep.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "aurora-borealis-wave",
+      "description": "Polar aurora borealis colour bands (green/purple/cyan/amber) undulating across deep-space background with twinkling stars",
+      "file": ".github/banners/aurora-borealis-wave.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "pulsar-sweep-arcs",
+      "description": "Twin pulsar stars on left and right emitting expanding elliptical sweep arcs with jet beams meeting at center where project text sits, blue/violet on dark space",
+      "file": ".github/banners/pulsar-sweep-arcs.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "tidal-wave-routing",
+      "description": "Tidal sine waves representing network routing paths in cyan/violet/amber, with routing beacon nodes and traveling packet dots on deep navy",
+      "file": ".github/banners/tidal-wave-routing.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "health-event-cascade",
+      "description": "EKG-style health pulse line across the banner with expanding ring events labeled OK/WARN/CRIT/OK in green/amber/red, project name above on dark background",
+      "file": ".github/banners/health-event-cascade.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "gravitational-lens-warp",
+      "description": "Dark mass at center with Einstein ring, amber/cyan light rays bending around gravitational lens, accretion disc shimmer rings, star field on deep space",
+      "file": ".github/banners/gravitational-lens-warp.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "build-pipeline-cascade",
+      "description": "CI/CD pipeline stages (SOURCE\u00e2\u2020\u2019BUILD\u00e2\u2020\u2019TEST\u00e2\u2020\u2019SCAN\u00e2\u2020\u2019PACKAGE\u00e2\u2020\u2019DEPLOY\u00e2\u2020\u2019\u00e2\u0153\u201c) lighting up in cascade with traveling pulse dots between green/amber/purple/orange stage boxes",
+      "file": ".github/banners/build-pipeline-cascade.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "lissajous-oscillation",
+      "description": "Dual Lissajous curve figures with animated tracing dots and phase-shift indicators, cyan/purple/pink on deep space",
+      "file": ".github/banners/lissajous-oscillation.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "event-bus-fanout",
+      "description": "Central event bus backbones with producer nodes emitting colored events and subscriber nodes receiving fan-out messages with traveling dots, cyan/multi on dark",
+      "file": ".github/banners/event-bus-fanout.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "comet-tail-trace",
+      "description": "Comet streaking left-to-right across deep space with animated glowing tail, cyan/amber debris particles and twinkling star field",
+      "file": ".github/banners/comet-tail-trace.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "kafka-fanout-streams",
+      "description": "Kafka topic fan-out with animated message dots flowing from producer through broker partitions to 5 consumer nodes on cyan/purple/amber/pink/green partition lines",
+      "file": ".github/banners/kafka-fanout-streams.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "crystal-lattice-growth",
+      "description": "Crystalline lattice nodes nucleating and branching with faceted edges, rose/cyan/amber/violet pulses growing from two cluster origins on deep midnight blue",
+      "file": ".github/banners/crystal-lattice-growth.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "event-sourcing-timeline",
+      "description": "Horizontal event sourcing timelines on left and right with colored event dots (PUT/SNAP/CMD/EVT) appearing with expanding rings, replay pulses, teal/amber/violet on deep dark",
+      "file": ".github/banners/event-sourcing-timeline.svg",
+      "created": "2026-04-15",
+      "project": "aws-util-python",
+      "type": "project"
+    },
+    {
+      "slug": "harmonic-pendulum-wave",
+      "description": "Series of pendulums with different lengths and periods creating traveling harmonic wave patterns, cyan/violet/amber bobs on dark background",
+      "file": ".github/banners/harmonic-pendulum-wave.svg",
+      "created": "2026-04-16",
+      "project": "aws-util-python",
+      "type": "author"
+    },
+    {
+      "slug": "test-coverage-matrix",
+      "description": "Grid of test cells lighting up green in sequence across modules with scanning lines and pulse dots flowing to center project name, representing test coverage",
+      "file": ".github/banners/test-coverage-matrix.svg",
+      "created": "2026-04-16",
+      "project": "aws-util-python",
+      "type": "project"
+    }
+  ]
+}

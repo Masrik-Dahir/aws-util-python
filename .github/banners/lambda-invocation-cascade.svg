@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <linearGradient id="lic-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0c0018"/>
+      <stop offset="50%" stop-color="#100022"/>
+      <stop offset="100%" stop-color="#0c0018"/>
+    </linearGradient>
+    <radialGradient id="lic-node-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff9800" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ff9800" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lic-node-blue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00b0ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#00b0ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lic-node-green" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#69ff47" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#69ff47" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#lic-bg)"/>
+
+  <!-- Grid lines subtle -->
+  <line x1="0" y1="30" x2="800" y2="30" stroke="#ffffff" stroke-width="0.3" opacity="0.06"/>
+  <line x1="0" y1="60" x2="800" y2="60" stroke="#ffffff" stroke-width="0.3" opacity="0.06"/>
+  <line x1="0" y1="90" x2="800" y2="90" stroke="#ffffff" stroke-width="0.3" opacity="0.06"/>
+
+  <!-- Cascade chain — event trigger (left) → Lambda nodes → results (right) -->
+  <!-- Connector edges -->
+  <line x1="55" y1="60" x2="115" y2="30" stroke="#ff9800" stroke-width="1" opacity="0.3">
+    <animate attributeName="opacity" values="0.1;0.7;0.1" dur="2.4s" begin="0.1s" repeatCount="indefinite"/>
+  </line>
+  <line x1="55" y1="60" x2="115" y2="60" stroke="#ff9800" stroke-width="1" opacity="0.3">
+    <animate attributeName="opacity" values="0.1;0.7;0.1" dur="2.4s" begin="0.2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="55" y1="60" x2="115" y2="90" stroke="#ff9800" stroke-width="1" opacity="0.3">
+    <animate attributeName="opacity" values="0.1;0.7;0.1" dur="2.4s" begin="0.3s" repeatCount="indefinite"/>
+  </line>
+  <!-- Layer 2 connections -->
+  <line x1="145" y1="30" x2="240" y2="20" stroke="#00b0ff" stroke-width="0.8" opacity="0.25">
+    <animate attributeName="opacity" values="0.1;0.6;0.1" dur="2.2s" begin="0.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="145" y1="30" x2="240" y2="45" stroke="#00b0ff" stroke-width="0.8" opacity="0.25">
+    <animate attributeName="opacity" values="0.1;0.6;0.1" dur="2.2s" begin="0.6s" repeatCount="indefinite"/>
+  </line>
+  <line x1="145" y1="60" x2="240" y2="60" stroke="#00b0ff" stroke-width="0.8" opacity="0.25">
+    <animate attributeName="opacity" values="0.1;0.6;0.1" dur="2.2s" begin="0.7s" repeatCount="indefinite"/>
+  </line>
+  <line x1="145" y1="90" x2="240" y2="75" stroke="#00b0ff" stroke-width="0.8" opacity="0.25">
+    <animate attributeName="opacity" values="0.1;0.6;0.1" dur="2.2s" begin="0.8s" repeatCount="indefinite"/>
+  </line>
+  <line x1="145" y1="90" x2="240" y2="100" stroke="#00b0ff" stroke-width="0.8" opacity="0.25">
+    <animate attributeName="opacity" values="0.1;0.6;0.1" dur="2.2s" begin="0.9s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Traveling pulse dots on edges -->
+  <circle cx="55" cy="60" r="2.5" fill="#ff9800">
+    <animateMotion path="M0,0 L60,-30" dur="0.8s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0" dur="0.8s" begin="0s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="55" cy="60" r="2.5" fill="#ff9800">
+    <animateMotion path="M0,0 L60,0" dur="0.8s" begin="0.15s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0" dur="0.8s" begin="0.15s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="55" cy="60" r="2.5" fill="#ff9800">
+    <animateMotion path="M0,0 L60,30" dur="0.8s" begin="0.3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0" dur="0.8s" begin="0.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="145" cy="30" r="2" fill="#00b0ff">
+    <animateMotion path="M0,0 L95,-10" dur="0.9s" begin="0.6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0" dur="0.9s" begin="0.6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="145" cy="60" r="2" fill="#00b0ff">
+    <animateMotion path="M0,0 L95,0" dur="0.9s" begin="0.75s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0" dur="0.9s" begin="0.75s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="145" cy="90" r="2" fill="#00b0ff">
+    <animateMotion path="M0,0 L95,10" dur="0.9s" begin="0.9s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0" dur="0.9s" begin="0.9s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Source event node -->
+  <rect x="22" y="48" width="26" height="24" rx="4" fill="#1a0030" stroke="#ff9800" stroke-width="1.5"/>
+  <text x="35" y="64" font-family="'Courier New',monospace" font-size="7" fill="#ff9800" text-anchor="middle">EVT</text>
+  <animate attributeName="opacity" values="0.7;1;0.7" dur="1.8s" repeatCount="indefinite"/>
+
+  <!-- Layer 1 Lambda nodes -->
+  <g>
+    <rect x="115" y="18" width="30" height="24" rx="4" fill="#1a0030" stroke="#ff9800" stroke-width="1.2">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="1.6s" begin="0.4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="130" y="34" font-family="'Courier New',monospace" font-size="7" fill="#ff9800" text-anchor="middle">λ</text>
+  </g>
+  <g>
+    <rect x="115" y="48" width="30" height="24" rx="4" fill="#1a0030" stroke="#ff9800" stroke-width="1.2">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="1.6s" begin="0.6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="130" y="64" font-family="'Courier New',monospace" font-size="7" fill="#ff9800" text-anchor="middle">λ</text>
+  </g>
+  <g>
+    <rect x="115" y="78" width="30" height="24" rx="4" fill="#1a0030" stroke="#ff9800" stroke-width="1.2">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="1.6s" begin="0.8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="130" y="94" font-family="'Courier New',monospace" font-size="7" fill="#ff9800" text-anchor="middle">λ</text>
+  </g>
+
+  <!-- Layer 2 service nodes -->
+  <g>
+    <rect x="240" y="8" width="30" height="24" rx="4" fill="#001428" stroke="#00b0ff" stroke-width="1">
+      <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.0s" begin="0.8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="255" y="24" font-family="'Courier New',monospace" font-size="6" fill="#00b0ff" text-anchor="middle">DDB</text>
+  </g>
+  <g>
+    <rect x="240" y="33" width="30" height="24" rx="4" fill="#001428" stroke="#00b0ff" stroke-width="1">
+      <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.0s" begin="1.0s" repeatCount="indefinite"/>
+    </rect>
+    <text x="255" y="49" font-family="'Courier New',monospace" font-size="6.5" fill="#00b0ff" text-anchor="middle">S3</text>
+  </g>
+  <g>
+    <rect x="240" y="48" width="30" height="24" rx="4" fill="#001428" stroke="#00b0ff" stroke-width="1">
+      <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.0s" begin="1.2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="255" y="64" font-family="'Courier New',monospace" font-size="6" fill="#00b0ff" text-anchor="middle">SQS</text>
+  </g>
+  <g>
+    <rect x="240" y="63" width="30" height="24" rx="4" fill="#001428" stroke="#00b0ff" stroke-width="1">
+      <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.0s" begin="1.4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="255" y="79" font-family="'Courier New',monospace" font-size="6" fill="#00b0ff" text-anchor="middle">SNS</text>
+  </g>
+  <g>
+    <rect x="240" y="88" width="30" height="24" rx="4" fill="#001428" stroke="#00b0ff" stroke-width="1">
+      <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.0s" begin="1.6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="255" y="104" font-family="'Courier New',monospace" font-size="5.5" fill="#00b0ff" text-anchor="middle">CW</text>
+  </g>
+
+  <!-- Text backdrop -->
+  <rect x="290" y="32" width="220" height="58" rx="8" fill="#000000" opacity="0.42"/>
+
+  <!-- Project name text -->
+  <text x="400" y="57" font-family="'Segoe UI',sans-serif" font-size="26" font-weight="700"
+        fill="#ffffff" text-anchor="middle" letter-spacing="4">
+    aws-util
+    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  <text x="400" y="78" font-family="'Segoe UI',sans-serif" font-size="11"
+        fill="#ff9800" text-anchor="middle" letter-spacing="1">
+    multi-service AWS orchestration for Python
+    <animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+
+  <!-- Right side result indicators -->
+  <g>
+    <circle cx="660" cy="20" r="5" fill="#69ff47" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="1.5s" begin="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="672" y="24" font-family="'Courier New',monospace" font-size="7" fill="#69ff47" opacity="0">
+      200
+      <animate attributeName="opacity" values="0;0.8;0" dur="1.5s" begin="1.8s" repeatCount="indefinite"/>
+    </text>
+  </g>
+  <g>
+    <circle cx="660" cy="50" r="5" fill="#69ff47" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="1.5s" begin="2.1s" repeatCount="indefinite"/>
+    </circle>
+    <text x="672" y="54" font-family="'Courier New',monospace" font-size="7" fill="#69ff47" opacity="0">
+      200
+      <animate attributeName="opacity" values="0;0.8;0" dur="1.5s" begin="2.1s" repeatCount="indefinite"/>
+    </text>
+  </g>
+  <g>
+    <circle cx="660" cy="80" r="5" fill="#69ff47" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="1.5s" begin="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="672" y="84" font-family="'Courier New',monospace" font-size="7" fill="#69ff47" opacity="0">
+      200
+      <animate attributeName="opacity" values="0;0.8;0" dur="1.5s" begin="2.4s" repeatCount="indefinite"/>
+    </text>
+  </g>
+  <g>
+    <circle cx="660" cy="105" r="5" fill="#ff5252" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="1.5s" begin="2.7s" repeatCount="indefinite"/>
+    </circle>
+    <text x="672" y="109" font-family="'Courier New',monospace" font-size="7" fill="#ff5252" opacity="0">
+      err
+      <animate attributeName="opacity" values="0;0.7;0" dur="1.5s" begin="2.7s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Latency timer ticking on far right -->
+  <text x="765" y="45" font-family="'Courier New',monospace" font-size="8" fill="#ffffff" text-anchor="middle" opacity="0.3">ms</text>
+  <text x="765" y="58" font-family="'Courier New',monospace" font-size="10" font-weight="bold" fill="#ff9800" text-anchor="middle" opacity="0">
+    47
+    <animate attributeName="opacity" values="0;0.8;0" dur="3.0s" begin="2.0s" repeatCount="indefinite"/>
+  </text>
+</svg>

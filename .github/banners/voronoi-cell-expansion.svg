@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <linearGradient id="vor-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <filter id="vor-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="vor-edge-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#vor-bg)"/>
+
+  <!-- Voronoi cell polygons — approximated as polygons expanding from center seeds -->
+  <!-- Cell 1 — left -->
+  <polygon points="0,0 120,0 95,60 40,85 0,70" fill="#0f4c3a" opacity="0">
+    <animate attributeName="opacity" values="0;0.18;0.22;0.18" dur="5s" repeatCount="indefinite" begin="0.2s"/>
+  </polygon>
+  <!-- Cell 2 -->
+  <polygon points="120,0 250,0 230,45 180,70 95,60" fill="#0c3b5e" opacity="0">
+    <animate attributeName="opacity" values="0;0.15;0.2;0.15" dur="5.5s" repeatCount="indefinite" begin="0.6s"/>
+  </polygon>
+  <!-- Cell 3 -->
+  <polygon points="250,0 380,0 360,55 310,75 230,45" fill="#2d1b69" opacity="0">
+    <animate attributeName="opacity" values="0;0.18;0.22;0.18" dur="4.8s" repeatCount="indefinite" begin="1s"/>
+  </polygon>
+  <!-- Cell 4 — center -->
+  <polygon points="380,0 460,0 450,65 400,80 360,55" fill="#0f4c3a" opacity="0">
+    <animate attributeName="opacity" values="0;0.2;0.25;0.2" dur="6s" repeatCount="indefinite" begin="0.4s"/>
+  </polygon>
+  <!-- Cell 5 -->
+  <polygon points="460,0 560,0 540,50 490,72 450,65" fill="#0c3b5e" opacity="0">
+    <animate attributeName="opacity" values="0;0.16;0.21;0.16" dur="5.2s" repeatCount="indefinite" begin="0.8s"/>
+  </polygon>
+  <!-- Cell 6 -->
+  <polygon points="560,0 680,0 660,55 610,70 540,50" fill="#2d1b69" opacity="0">
+    <animate attributeName="opacity" values="0;0.18;0.22;0.18" dur="5.7s" repeatCount="indefinite" begin="1.2s"/>
+  </polygon>
+  <!-- Cell 7 — right -->
+  <polygon points="680,0 800,0 800,80 720,80 660,55" fill="#0f4c3a" opacity="0">
+    <animate attributeName="opacity" values="0;0.15;0.2;0.15" dur="4.6s" repeatCount="indefinite" begin="0.5s"/>
+  </polygon>
+  <!-- Bottom cells -->
+  <polygon points="0,70 40,85 60,120 0,120" fill="#0c3b5e" opacity="0">
+    <animate attributeName="opacity" values="0;0.14;0.18;0.14" dur="5.3s" repeatCount="indefinite" begin="1.5s"/>
+  </polygon>
+  <polygon points="40,85 180,70 200,120 60,120" fill="#2d1b69" opacity="0">
+    <animate attributeName="opacity" values="0;0.16;0.2;0.16" dur="6s" repeatCount="indefinite" begin="1s"/>
+  </polygon>
+  <polygon points="180,70 310,75 330,120 200,120" fill="#0f4c3a" opacity="0">
+    <animate attributeName="opacity" values="0;0.18;0.22;0.18" dur="5.5s" repeatCount="indefinite" begin="0.7s"/>
+  </polygon>
+  <polygon points="310,75 400,80 420,120 330,120" fill="#0c3b5e" opacity="0">
+    <animate attributeName="opacity" values="0;0.2;0.25;0.2" dur="4.9s" repeatCount="indefinite" begin="1.3s"/>
+  </polygon>
+  <polygon points="400,80 490,72 510,120 420,120" fill="#2d1b69" opacity="0">
+    <animate attributeName="opacity" values="0;0.17;0.21;0.17" dur="5.8s" repeatCount="indefinite" begin="0.9s"/>
+  </polygon>
+  <polygon points="490,72 610,70 630,120 510,120" fill="#0f4c3a" opacity="0">
+    <animate attributeName="opacity" values="0;0.15;0.19;0.15" dur="5.2s" repeatCount="indefinite" begin="1.6s"/>
+  </polygon>
+  <polygon points="610,70 720,80 740,120 630,120" fill="#0c3b5e" opacity="0">
+    <animate attributeName="opacity" values="0;0.18;0.22;0.18" dur="4.7s" repeatCount="indefinite" begin="1.1s"/>
+  </polygon>
+  <polygon points="720,80 800,80 800,120 740,120" fill="#2d1b69" opacity="0">
+    <animate attributeName="opacity" values="0;0.16;0.2;0.16" dur="5.4s" repeatCount="indefinite" begin="0.6s"/>
+  </polygon>
+
+  <!-- Voronoi edge lines — animated stroke -->
+  <g filter="url(#vor-edge-glow)">
+    <line x1="95" y1="60" x2="180" y2="70" stroke="#14b8a6" stroke-width="0.7" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0.5;0.7" dur="4s" repeatCount="indefinite" begin="0.3s"/>
+    </line>
+    <line x1="180" y1="70" x2="230" y2="45" stroke="#14b8a6" stroke-width="0.6" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0.4;0.6" dur="4.5s" repeatCount="indefinite" begin="0.7s"/>
+    </line>
+    <line x1="230" y1="45" x2="310" y2="75" stroke="#a78bfa" stroke-width="0.7" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0.5;0.7" dur="5s" repeatCount="indefinite" begin="1s"/>
+    </line>
+    <line x1="310" y1="75" x2="360" y2="55" stroke="#a78bfa" stroke-width="0.6" opacity="0">
+      <animate attributeName="opacity" values="0;0.65;0.45;0.65" dur="4.8s" repeatCount="indefinite" begin="1.2s"/>
+    </line>
+    <line x1="360" y1="55" x2="400" y2="80" stroke="#14b8a6" stroke-width="0.7" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0.5;0.7" dur="4.3s" repeatCount="indefinite" begin="0.5s"/>
+    </line>
+    <line x1="400" y1="80" x2="450" y2="65" stroke="#14b8a6" stroke-width="0.6" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0.4;0.6" dur="5.2s" repeatCount="indefinite" begin="0.9s"/>
+    </line>
+    <line x1="450" y1="65" x2="490" y2="72" stroke="#f59e0b" stroke-width="0.7" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0.5;0.7" dur="4.6s" repeatCount="indefinite" begin="1.4s"/>
+    </line>
+    <line x1="490" y1="72" x2="540" y2="50" stroke="#f59e0b" stroke-width="0.6" opacity="0">
+      <animate attributeName="opacity" values="0;0.65;0.45;0.65" dur="5.1s" repeatCount="indefinite" begin="1.1s"/>
+    </line>
+    <line x1="540" y1="50" x2="610" y2="70" stroke="#a78bfa" stroke-width="0.7" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0.5;0.7" dur="4.4s" repeatCount="indefinite" begin="0.8s"/>
+    </line>
+    <line x1="610" y1="70" x2="660" y2="55" stroke="#a78bfa" stroke-width="0.6" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0.4;0.6" dur="5.3s" repeatCount="indefinite" begin="1.5s"/>
+    </line>
+    <line x1="660" y1="55" x2="720" y2="80" stroke="#14b8a6" stroke-width="0.7" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0.5;0.7" dur="4.7s" repeatCount="indefinite" begin="0.6s"/>
+    </line>
+    <!-- Vertical edges -->
+    <line x1="95" y1="60" x2="40" y2="85" stroke="#14b8a6" stroke-width="0.6" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0.4;0.6" dur="4.2s" repeatCount="indefinite" begin="0.4s"/>
+    </line>
+  </g>
+
+  <!-- Seed node dots (Voronoi centers) — pulsing -->
+  <g filter="url(#vor-glow)">
+    <circle cx="60" cy="30" r="2" fill="#2dd4bf">
+      <animate attributeName="r" values="2;3.2;2" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0.7;0.9" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="20" r="1.8" fill="#818cf8">
+      <animate attributeName="r" values="1.8;3;1.8" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+      <animate attributeName="opacity" values="0;0;0.85;0.65;0.85" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <circle cx="315" cy="25" r="2" fill="#f59e0b">
+      <animate attributeName="r" values="2;3.2;2" dur="3.8s" repeatCount="indefinite" begin="1s"/>
+      <animate attributeName="opacity" values="0;0;0;0.9;0.7;0.9" dur="5s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    <circle cx="420" cy="18" r="1.8" fill="#2dd4bf">
+      <animate attributeName="r" values="1.8;3;1.8" dur="4.5s" repeatCount="indefinite" begin="0.3s"/>
+      <animate attributeName="opacity" values="0;0.85;0.65;0.85" dur="4.5s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+    <circle cx="510" cy="28" r="2" fill="#818cf8">
+      <animate attributeName="r" values="2;3.2;2" dur="3.6s" repeatCount="indefinite" begin="0.7s"/>
+      <animate attributeName="opacity" values="0;0;0.88;0.68;0.88" dur="4.5s" repeatCount="indefinite" begin="0.7s"/>
+    </circle>
+    <circle cx="605" cy="22" r="1.8" fill="#f59e0b">
+      <animate attributeName="r" values="1.8;2.8;1.8" dur="4.2s" repeatCount="indefinite" begin="1.2s"/>
+      <animate attributeName="opacity" values="0;0;0;0.8;0.6;0.8" dur="5.2s" repeatCount="indefinite" begin="1.2s"/>
+    </circle>
+    <circle cx="730" cy="30" r="2" fill="#2dd4bf">
+      <animate attributeName="r" values="2;3.2;2" dur="3.9s" repeatCount="indefinite" begin="0.4s"/>
+      <animate attributeName="opacity" values="0;0.9;0.7;0.9" dur="3.9s" repeatCount="indefinite" begin="0.4s"/>
+    </circle>
+  </g>
+
+  <!-- Expanding ring at each seed (Voronoi expansion visual) -->
+  <g opacity="0.4">
+    <circle cx="200" cy="20" r="8" fill="none" stroke="#818cf8" stroke-width="0.8">
+      <animate attributeName="r" values="4;22;4" dur="5s" repeatCount="indefinite" begin="0.5s"/>
+      <animate attributeName="opacity" values="0.5;0;0.5" dur="5s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <circle cx="420" cy="18" r="8" fill="none" stroke="#2dd4bf" stroke-width="0.8">
+      <animate attributeName="r" values="4;22;4" dur="5.5s" repeatCount="indefinite" begin="1.2s"/>
+      <animate attributeName="opacity" values="0.5;0;0.5" dur="5.5s" repeatCount="indefinite" begin="1.2s"/>
+    </circle>
+    <circle cx="605" cy="22" r="8" fill="none" stroke="#f59e0b" stroke-width="0.8">
+      <animate attributeName="r" values="4;20;4" dur="4.8s" repeatCount="indefinite" begin="0.8s"/>
+      <animate attributeName="opacity" values="0.5;0;0.5" dur="4.8s" repeatCount="indefinite" begin="0.8s"/>
+    </circle>
+  </g>
+
+  <!-- Text overlay backing -->
+  <rect x="220" y="30" width="360" height="60" rx="8" fill="#0d1117" opacity="0.78"/>
+
+  <!-- Project name text -->
+  <text x="400" y="58" font-family="'Segoe UI',sans-serif" font-size="30" font-weight="700"
+        fill="#2dd4bf" text-anchor="middle" letter-spacing="4">
+    aws-util-python
+    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  <text x="400" y="80" font-family="'Segoe UI',sans-serif" font-size="12"
+        fill="#a78bfa" text-anchor="middle" letter-spacing="1">
+    Multi-service AWS utilities for Python, sync and async — batteries included
+    <animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+</svg>

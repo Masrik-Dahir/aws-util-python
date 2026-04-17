@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <linearGradient id="hec-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="50%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
+    <radialGradient id="hec-pulse1" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hec-pulse2" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hec-pulse3" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="hec-glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#hec-bg)"/>
+
+  <!-- Horizontal base line -->
+  <line x1="30" y1="90" x2="770" y2="90" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- EKG-style health pulse line -->
+  <polyline points="30,90 80,90 95,90 105,55 115,115 125,90 175,90 190,90 200,50 210,120 220,90 270,90 285,90 295,45 305,118 315,90 360,90 375,90 385,40 395,122 405,90 450,90 465,90 475,48 485,116 495,90 540,90 555,90 565,42 575,120 585,90 625,90 640,90 650,50 660,115 670,90 720,90 770,90"
+    fill="none" stroke="#22c55e" stroke-width="1.5" opacity="0" filter="url(#hec-glow)">
+    <animate attributeName="opacity" values="0;0.9;0.9;0.9" dur="2s" fill="freeze"/>
+    <animate attributeName="stroke-dasharray" values="1600;1600" dur="2s" fill="freeze"/>
+    <animate attributeName="stroke-dashoffset" values="1600;0" dur="2s" fill="freeze"/>
+  </polyline>
+
+  <!-- Health check event pulse rings -->
+  <circle cx="105" cy="55" r="3" fill="#22c55e" filter="url(#hec-glow)">
+    <animate attributeName="r" values="3;14;3" dur="3s" begin="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0;1" dur="3s" begin="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="295" cy="45" r="3" fill="#f59e0b" filter="url(#hec-glow)">
+    <animate attributeName="r" values="3;12;3" dur="3s" begin="2.4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0;1" dur="3s" begin="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="475" cy="48" r="3" fill="#ef4444" filter="url(#hec-glow)">
+    <animate attributeName="r" values="3;16;3" dur="3s" begin="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0;1" dur="3s" begin="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="650" cy="50" r="3" fill="#22c55e" filter="url(#hec-glow)">
+    <animate attributeName="r" values="3;13;3" dur="3s" begin="3.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0;1" dur="3s" begin="3.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Service labels -->
+  <text x="105" y="37" font-family="'Segoe UI',sans-serif" font-size="7" fill="#22c55e" text-anchor="middle" opacity="0">
+    OK<animate attributeName="opacity" values="0;1" begin="2s" dur="0.5s" fill="freeze"/>
+  </text>
+  <text x="295" y="29" font-family="'Segoe UI',sans-serif" font-size="7" fill="#f59e0b" text-anchor="middle" opacity="0">
+    WARN<animate attributeName="opacity" values="0;1" begin="2.4s" dur="0.5s" fill="freeze"/>
+  </text>
+  <text x="475" y="31" font-family="'Segoe UI',sans-serif" font-size="7" fill="#ef4444" text-anchor="middle" opacity="0">
+    CRIT<animate attributeName="opacity" values="0;1" begin="2.8s" dur="0.5s" fill="freeze"/>
+  </text>
+  <text x="650" y="33" font-family="'Segoe UI',sans-serif" font-size="7" fill="#22c55e" text-anchor="middle" opacity="0">
+    OK<animate attributeName="opacity" values="0;1" begin="3.2s" dur="0.5s" fill="freeze"/>
+  </text>
+
+  <!-- Text backdrop -->
+  <rect x="220" y="4" width="360" height="40" rx="6" fill="#000000" opacity="0.6"/>
+
+  <!-- Project name text -->
+  <text x="400" y="24" font-family="'Segoe UI',sans-serif" font-size="24" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle" letter-spacing="3">
+    aws-util<animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  <text x="400" y="38" font-family="'Segoe UI',sans-serif" font-size="9"
+        fill="#22c55e" text-anchor="middle" letter-spacing="2">
+    100+ AWS services · sync &amp; native async · Pydantic v2<animate attributeName="opacity" values="0;1" begin="0.8s" dur="0.8s" fill="freeze"/>
+  </text>
+</svg>

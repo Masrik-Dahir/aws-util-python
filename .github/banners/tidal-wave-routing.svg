@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <linearGradient id="twr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040f1a"/>
+      <stop offset="50%" stop-color="#071829"/>
+      <stop offset="100%" stop-color="#040f1a"/>
+    </linearGradient>
+    <linearGradient id="twr-wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#0ea5e9" stop-opacity="0.7"/>
+      <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="twr-wave2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#7c3aed" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#a78bfa" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="twr-wave3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#f59e0b" stop-opacity="0.4"/>
+      <stop offset="65%" stop-color="#fbbf24" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="twr-glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#twr-bg)"/>
+
+  <!-- Tidal wave 1 — cyan, large slow wave -->
+  <path d="M-200,85 Q0,55 200,80 Q400,105 600,75 Q800,45 1000,70 Q1200,95 1400,65" stroke="url(#twr-wave1)" stroke-width="2" fill="none" opacity="0.8" filter="url(#twr-glow)">
+    <animateTransform attributeName="transform" type="translate" from="0,0" to="-400,0" dur="8s" repeatCount="indefinite"/>
+  </path>
+  <path d="M-200,85 Q0,55 200,80 Q400,105 600,75 Q800,45 1000,70 Q1200,95 1400,65" stroke="url(#twr-wave1)" stroke-width="1.5" fill="none" opacity="0.4">
+    <animateTransform attributeName="transform" type="translate" from="400,0" to="0,0" dur="8s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Tidal wave 2 — violet, medium wave -->
+  <path d="M-300,75 Q-100,45 100,68 Q300,91 500,62 Q700,33 900,58 Q1100,83 1300,54" stroke="url(#twr-wave2)" stroke-width="1.8" fill="none" opacity="0.75" filter="url(#twr-glow)">
+    <animateTransform attributeName="transform" type="translate" from="-300,0" to="100,0" dur="6s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Tidal wave 3 — amber, fast small wave -->
+  <path d="M-100,95 Q50,78 200,90 Q350,102 500,85 Q650,68 800,80 Q950,92 1100,76" stroke="url(#twr-wave3)" stroke-width="1.5" fill="none" opacity="0.6">
+    <animateTransform attributeName="transform" type="translate" from="0,0" to="-200,0" dur="4s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Route beacon nodes — left side -->
+  <circle cx="60" cy="60" r="5" fill="#0ea5e9" opacity="0.2">
+    <animate attributeName="r" values="5;9;5" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="60" cy="60" r="2.5" fill="#38bdf8"/>
+
+  <!-- Route beacon nodes — right side -->
+  <circle cx="740" cy="60" r="5" fill="#7c3aed" opacity="0.2">
+    <animate attributeName="r" values="5;9;5" dur="3.5s" begin="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.5s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="740" cy="60" r="2.5" fill="#a78bfa"/>
+
+  <!-- Routing packet traveling left to right -->
+  <circle cx="60" cy="70" r="4" fill="#f59e0b" opacity="0">
+    <animate attributeName="cx" values="60;740" dur="5s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="70;55;80;65;60" dur="5s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;1;0" dur="5s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Routing packet traveling right to left -->
+  <circle cx="740" cy="50" r="3" fill="#38bdf8" opacity="0">
+    <animate attributeName="cx" values="740;60" dur="5s" begin="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="50;70;45;65;55" dur="5s" begin="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;1;0" dur="5s" begin="2.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Text overlay backdrop -->
+  <rect x="180" y="28" width="440" height="64" rx="8" fill="#000000" opacity="0.45"/>
+
+  <!-- Text -->
+  <text x="400" y="55" font-family="'Segoe UI',sans-serif" font-size="27" font-weight="700"
+        fill="#e0f2fe" text-anchor="middle" letter-spacing="3">
+    Masrik Dahir<animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  <text x="400" y="79" font-family="'Segoe UI',sans-serif" font-size="13"
+        fill="#7c3aed" text-anchor="middle" letter-spacing="2">
+    ✦ masrikdahir.com ✦<animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+</svg>

@@ -1,0 +1,17 @@
+services:
+  localstack:
+    image: localstack/localstack:4.4.0
+    container_name: awsutil-localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=s3,sqs,sns,dynamodb,ssm,secretsmanager,lambda,cloudwatch,logs,sts,events,kms,ec2,iam,cognito-idp,route53,acm,stepfunctions,cloudformation,kinesis,firehose,ses,glue,ecs,ecr,rds,apigateway,apigatewayv2,elbv2
+      - DEFAULT_REGION=us-east-1
+      - DEBUG=0
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - localstack_data:/var/lib/localstack
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  localstack_data:

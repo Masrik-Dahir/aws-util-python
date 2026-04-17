@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <radialGradient id="cor-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#03090f"/>
+      <stop offset="100%" stop-color="#000a18"/>
+    </radialGradient>
+    <!-- Orbit ring gradients -->
+    <linearGradient id="cor-ring1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="cor-ring2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="cor-glow-soft">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="cor-glow-strong">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="cor-textglow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#cor-bg)"/>
+
+  <!-- Distant stars -->
+  <circle cx="50" cy="15" r="1" fill="#ffffff" opacity="0.4"/>
+  <circle cx="130" cy="90" r="1" fill="#ffffff" opacity="0.3"/>
+  <circle cx="720" cy="20" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="760" cy="95" r="1" fill="#ffffff" opacity="0.3"/>
+  <circle cx="680" cy="55" r="1" fill="#60a5fa" opacity="0.5"/>
+  <circle cx="80" cy="60" r="1" fill="#60a5fa" opacity="0.4"/>
+  <circle cx="200" cy="10" r="1" fill="#ffffff" opacity="0.3"/>
+  <circle cx="600" cy="8"  r="1" fill="#ffffff" opacity="0.4"/>
+  <circle cx="30"  cy="105" r="1" fill="#ffffff" opacity="0.3"/>
+  <circle cx="770" cy="50"  r="1" fill="#a78bfa" opacity="0.4"/>
+
+  <!-- Outer orbit ellipse (tilted perspective) — ring 1 -->
+  <ellipse cx="400" cy="60" rx="340" ry="28" fill="none" stroke="url(#cor-ring1)" stroke-width="1" opacity="0.5"/>
+
+  <!-- Outer orbit ellipse — ring 2, slightly smaller, rotated feel -->
+  <ellipse cx="400" cy="60" rx="260" ry="20" fill="none" stroke="url(#cor-ring2)" stroke-width="1" opacity="0.4"/>
+
+  <!-- Orbiting node 1 — AWS service dot — blue — ring 1, slow -->
+  <g filter="url(#cor-glow-soft)">
+    <circle cx="0" cy="0" r="5" fill="#38bdf8">
+      <animateMotion dur="7s" repeatCount="indefinite" begin="0s">
+        <mpath xlink:href="#cor-path-outer"/>
+      </animateMotion>
+    </circle>
+  </g>
+  <path id="cor-path-outer" d="M 740,60 A 340,28 0 1 1 739.9,60" fill="none"/>
+
+  <!-- Orbiting node 2 — blue offset 180° -->
+  <g filter="url(#cor-glow-soft)">
+    <circle cx="0" cy="0" r="4" fill="#7dd3fc">
+      <animateMotion dur="7s" repeatCount="indefinite" begin="-3.5s">
+        <mpath xlink:href="#cor-path-outer"/>
+      </animateMotion>
+    </circle>
+  </g>
+
+  <!-- Orbiting node 3 — violet — ring 2, medium -->
+  <g filter="url(#cor-glow-soft)">
+    <circle cx="0" cy="0" r="5" fill="#818cf8">
+      <animateMotion dur="5s" repeatCount="indefinite" begin="0s">
+        <mpath xlink:href="#cor-path-inner"/>
+      </animateMotion>
+    </circle>
+  </g>
+  <path id="cor-path-inner" d="M 660,60 A 260,20 0 1 1 659.9,60" fill="none"/>
+
+  <!-- Orbiting node 4 — violet offset 180° -->
+  <g filter="url(#cor-glow-soft)">
+    <circle cx="0" cy="0" r="3.5" fill="#c7d2fe">
+      <animateMotion dur="5s" repeatCount="indefinite" begin="-2.5s">
+        <mpath xlink:href="#cor-path-inner"/>
+      </animateMotion>
+    </circle>
+  </g>
+
+  <!-- Central cloud glyph — stylised "cloud" using arcs -->
+  <g filter="url(#cor-glow-strong)">
+    <circle cx="400" cy="60" r="16" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" opacity="0.9"/>
+    <!-- Cloud shape inside circle -->
+    <path d="M390,64 Q387,64 387,61 Q387,57 391,57 Q392,54 396,54 Q400,54 401,57 Q404,56 406,59 Q408,59 408,62 Q408,64 405,64 Z"
+          fill="#38bdf8" opacity="0.9"/>
+    <rect x="391" y="63" width="3" height="3" rx="0.5" fill="#0f172a"/>
+    <rect x="396" y="63" width="3" height="3" rx="0.5" fill="#0f172a"/>
+    <rect x="401" y="63" width="3" height="3" rx="0.5" fill="#0f172a"/>
+  </g>
+
+  <!-- Pulse rings emanating from centre -->
+  <circle cx="400" cy="60" r="22" fill="none" stroke="#38bdf8" stroke-width="0.8">
+    <animate attributeName="r" values="22;50" dur="3s" repeatCount="indefinite" begin="0s"/>
+    <animate attributeName="opacity" values="0.6;0" dur="3s" repeatCount="indefinite" begin="0s"/>
+  </circle>
+  <circle cx="400" cy="60" r="22" fill="none" stroke="#818cf8" stroke-width="0.8">
+    <animate attributeName="r" values="22;50" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+    <animate attributeName="opacity" values="0.5;0" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+  </circle>
+
+  <!-- Text overlay backdrop -->
+  <rect x="170" y="26" width="460" height="68" rx="10" fill="#000000" opacity="0.52"/>
+
+  <!-- Project name -->
+  <text x="400" y="58"
+        font-family="'Segoe UI', 'Helvetica Neue', sans-serif"
+        font-size="30" font-weight="700"
+        fill="#f0f9ff" text-anchor="middle" letter-spacing="4"
+        filter="url(#cor-textglow)">
+    aws-util
+    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+
+  <!-- Tagline -->
+  <text x="400" y="82"
+        font-family="'Segoe UI', 'Helvetica Neue', sans-serif"
+        font-size="12" fill="#38bdf8" text-anchor="middle" letter-spacing="1">
+    Production-ready Python wrappers for every AWS service
+    <animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+</svg>

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <radialGradient id="sprs-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#020810"/>
+    </radialGradient>
+    <radialGradient id="sprs-ring1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sprs-ring2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ff88" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00ff88" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sprs-glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#sprs-bg)"/>
+
+  <!-- Sonar origin point left -->
+  <circle cx="120" cy="60" r="4" fill="#00e5ff" filter="url(#sprs-glow)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Sonar rings expanding left -->
+  <circle cx="120" cy="60" r="0" fill="none" stroke="#00e5ff" stroke-width="1.5" opacity="0">
+    <animate attributeName="r" values="0;80" dur="3s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0" dur="3s" begin="0s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="120" cy="60" r="0" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0">
+    <animate attributeName="r" values="0;80" dur="3s" begin="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="120" cy="60" r="0" fill="none" stroke="#00e5ff" stroke-width="0.8" opacity="0">
+    <animate attributeName="r" values="0;80" dur="3s" begin="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0" dur="3s" begin="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Sonar origin point right -->
+  <circle cx="680" cy="60" r="4" fill="#00ff88" filter="url(#sprs-glow)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Sonar rings expanding right -->
+  <circle cx="680" cy="60" r="0" fill="none" stroke="#00ff88" stroke-width="1.5" opacity="0">
+    <animate attributeName="r" values="0;80" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="680" cy="60" r="0" fill="none" stroke="#00ff88" stroke-width="1" opacity="0">
+    <animate attributeName="r" values="0;80" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="680" cy="60" r="0" fill="none" stroke="#00ff88" stroke-width="0.8" opacity="0">
+    <animate attributeName="r" values="0;80" dur="3s" begin="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0" dur="3s" begin="2.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Horizontal scan line sweep -->
+  <line x1="0" y1="60" x2="800" y2="60" stroke="#00e5ff" stroke-width="0.4" opacity="0.15"/>
+
+  <!-- Scanning beam arc left -->
+  <line x1="120" y1="60" x2="220" y2="20" stroke="#00e5ff" stroke-width="1" opacity="0" filter="url(#sprs-glow)">
+    <animate attributeName="opacity" values="0;0.9;0" dur="3s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0,120,60;360,120,60" dur="3s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Scanning beam arc right -->
+  <line x1="680" y1="60" x2="780" y2="20" stroke="#00ff88" stroke-width="1" opacity="0" filter="url(#sprs-glow)">
+    <animate attributeName="opacity" values="0;0.9;0" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0,680,60;-360,680,60" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Ping blips on the scan field -->
+  <circle cx="310" cy="35" r="3" fill="#00e5ff" opacity="0" filter="url(#sprs-glow)">
+    <animate attributeName="opacity" values="0;1;0" dur="0.4s" begin="0.8s" repeatCount="indefinite" repeatDur="3s"/>
+  </circle>
+  <circle cx="490" cy="82" r="2.5" fill="#00ff88" opacity="0" filter="url(#sprs-glow)">
+    <animate attributeName="opacity" values="0;1;0" dur="0.4s" begin="1.3s" repeatCount="indefinite" repeatDur="3s"/>
+  </circle>
+  <circle cx="370" cy="48" r="2" fill="#ff6b35" opacity="0" filter="url(#sprs-glow)">
+    <animate attributeName="opacity" values="0;1;0" dur="0.4s" begin="2.1s" repeatCount="indefinite" repeatDur="3s"/>
+  </circle>
+  <circle cx="560" cy="30" r="2.5" fill="#a855f7" opacity="0" filter="url(#sprs-glow)">
+    <animate attributeName="opacity" values="0;1;0" dur="0.4s" begin="2.7s" repeatCount="indefinite" repeatDur="3s"/>
+  </circle>
+  <circle cx="240" cy="75" r="2" fill="#00e5ff" opacity="0" filter="url(#sprs-glow)">
+    <animate attributeName="opacity" values="0;1;0" dur="0.4s" begin="1.6s" repeatCount="indefinite" repeatDur="3s"/>
+  </circle>
+
+  <!-- Text overlay backdrop -->
+  <rect x="220" y="28" width="360" height="65" rx="8" fill="#000000" opacity="0.45"/>
+
+  <!-- Text -->
+  <text x="400" y="58" font-family="'Segoe UI',sans-serif" font-size="27" font-weight="700"
+        fill="#e0f7ff" text-anchor="middle" letter-spacing="3">
+    Masrik Dahir<animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  <text x="400" y="82" font-family="'Segoe UI',sans-serif" font-size="13"
+        fill="#00e5ff" text-anchor="middle" letter-spacing="2">
+    ✦ masrikdahir.com ✦<animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+</svg>

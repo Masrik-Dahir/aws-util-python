@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <linearGradient id="hpw-bg" x1="0" y1="0" x2="800" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="50%" stop-color="#0f1629"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <linearGradient id="hpw-rod1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="hpw-rod2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="hpw-rod3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <radialGradient id="hpw-glow-cyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hpw-glow-violet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hpw-glow-amber" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#hpw-bg)"/>
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="10" x2="800" y2="10" stroke="#1e293b" stroke-width="0.5" opacity="0.3"/>
+  <line x1="0" y1="60" x2="800" y2="60" stroke="#1e293b" stroke-width="0.5" opacity="0.2"/>
+  <!-- Left pendulum group -->
+  <!-- Pendulum 1 (short, fast) -->
+  <g>
+    <line x1="60" y1="5" x2="60" y2="55" stroke="url(#hpw-rod1)" stroke-width="1.5" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" values="-25 60 5;25 60 5;-25 60 5" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="60" cy="55" r="5" fill="#38bdf8" opacity="0.85">
+      <animateTransform attributeName="transform" type="rotate" values="-25 60 5;25 60 5;-25 60 5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="55" r="10" fill="url(#hpw-glow-cyan)" opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" values="-25 60 5;25 60 5;-25 60 5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- Pendulum 2 (medium) -->
+  <g>
+    <line x1="90" y1="5" x2="90" y2="65" stroke="url(#hpw-rod2)" stroke-width="1.5" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" values="25 90 5;-25 90 5;25 90 5" dur="2.4s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="90" cy="65" r="5" fill="#a78bfa" opacity="0.85">
+      <animateTransform attributeName="transform" type="rotate" values="25 90 5;-25 90 5;25 90 5" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="90" cy="65" r="10" fill="url(#hpw-glow-violet)" opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" values="25 90 5;-25 90 5;25 90 5" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- Pendulum 3 (long, slow) -->
+  <g>
+    <line x1="120" y1="5" x2="120" y2="80" stroke="url(#hpw-rod3)" stroke-width="1.5" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" values="-20 120 5;20 120 5;-20 120 5" dur="2.8s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="120" cy="80" r="5" fill="#fbbf24" opacity="0.85">
+      <animateTransform attributeName="transform" type="rotate" values="-20 120 5;20 120 5;-20 120 5" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="80" r="10" fill="url(#hpw-glow-amber)" opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" values="-20 120 5;20 120 5;-20 120 5" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- Pendulum 4 -->
+  <g>
+    <line x1="150" y1="5" x2="150" y2="70" stroke="url(#hpw-rod1)" stroke-width="1.5" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" values="22 150 5;-22 150 5;22 150 5" dur="2.6s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="150" cy="70" r="4.5" fill="#38bdf8" opacity="0.85">
+      <animateTransform attributeName="transform" type="rotate" values="22 150 5;-22 150 5;22 150 5" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- Pendulum 5 -->
+  <g>
+    <line x1="180" y1="5" x2="180" y2="58" stroke="url(#hpw-rod2)" stroke-width="1.5" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" values="-28 180 5;28 180 5;-28 180 5" dur="2.1s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="180" cy="58" r="4.5" fill="#a78bfa" opacity="0.85">
+      <animateTransform attributeName="transform" type="rotate" values="-28 180 5;28 180 5;-28 180 5" dur="2.1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- Right pendulum group (mirrored phase) -->
+  <!-- Pendulum 6 -->
+  <g>
+    <line x1="620" y1="5" x2="620" y2="58" stroke="url(#hpw-rod2)" stroke-width="1.5" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" values="28 620 5;-28 620 5;28 620 5" dur="2.1s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="620" cy="58" r="4.5" fill="#a78bfa" opacity="0.85">
+      <animateTransform attributeName="transform" type="rotate" values="28 620 5;-28 620 5;28 620 5" dur="2.1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- Pendulum 7 -->
+  <g>
+    <line x1="650" y1="5" x2="650" y2="70" stroke="url(#hpw-rod1)" stroke-width="1.5" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" values="-22 650 5;22 650 5;-22 650 5" dur="2.6s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="650" cy="70" r="4.5" fill="#38bdf8" opacity="0.85">
+      <animateTransform attributeName="transform" type="rotate" values="-22 650 5;22 650 5;-22 650 5" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- Pendulum 8 -->
+  <g>
+    <line x1="680" y1="5" x2="680" y2="80" stroke="url(#hpw-rod3)" stroke-width="1.5" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" values="20 680 5;-20 680 5;20 680 5" dur="2.8s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="680" cy="80" r="5" fill="#fbbf24" opacity="0.85">
+      <animateTransform attributeName="transform" type="rotate" values="20 680 5;-20 680 5;20 680 5" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="680" cy="80" r="10" fill="url(#hpw-glow-amber)" opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" values="20 680 5;-20 680 5;20 680 5" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- Pendulum 9 -->
+  <g>
+    <line x1="710" y1="5" x2="710" y2="65" stroke="url(#hpw-rod2)" stroke-width="1.5" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" values="-25 710 5;25 710 5;-25 710 5" dur="2.4s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="710" cy="65" r="5" fill="#a78bfa" opacity="0.85">
+      <animateTransform attributeName="transform" type="rotate" values="-25 710 5;25 710 5;-25 710 5" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- Pendulum 10 -->
+  <g>
+    <line x1="740" y1="5" x2="740" y2="55" stroke="url(#hpw-rod1)" stroke-width="1.5" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" values="25 740 5;-25 740 5;25 740 5" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="740" cy="55" r="5" fill="#38bdf8" opacity="0.85">
+      <animateTransform attributeName="transform" type="rotate" values="25 740 5;-25 740 5;25 740 5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="740" cy="55" r="10" fill="url(#hpw-glow-cyan)" opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" values="25 740 5;-25 740 5;25 740 5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- Mounting bar top -->
+  <rect x="40" y="2" width="160" height="4" rx="2" fill="#1e293b" opacity="0.8"/>
+  <rect x="600" y="2" width="160" height="4" rx="2" fill="#1e293b" opacity="0.8"/>
+  <!-- Center dark overlay for text readability -->
+  <rect x="200" y="25" width="400" height="70" rx="10" fill="#000000" opacity="0.45"/>
+  <!-- Author text -->
+  <text x="400" y="52" font-family="'Segoe UI',sans-serif" font-size="27" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle" letter-spacing="3">
+    Masrik Dahir<animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  <text x="400" y="80" font-family="'Segoe UI',sans-serif" font-size="13"
+        fill="#a78bfa" text-anchor="middle" letter-spacing="2">
+    ✦ masrikdahir.com ✦<animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+  <!-- Subtle wave trace line connecting pendulum paths -->
+  <path d="M60,100 Q200,85 400,95 Q600,105 740,90" stroke="#38bdf8" stroke-width="0.8" fill="none" opacity="0.15">
+    <animate attributeName="d" values="M60,100 Q200,85 400,95 Q600,105 740,90;M60,90 Q200,105 400,85 Q600,95 740,100;M60,100 Q200,85 400,95 Q600,105 740,90" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <path d="M60,105 Q200,92 400,100 Q600,108 740,95" stroke="#fbbf24" stroke-width="0.6" fill="none" opacity="0.1">
+    <animate attributeName="d" values="M60,105 Q200,92 400,100 Q600,108 740,95;M60,95 Q200,108 400,90 Q600,100 740,105;M60,105 Q200,92 400,100 Q600,108 740,95" dur="3.5s" repeatCount="indefinite"/>
+  </path>
+</svg>

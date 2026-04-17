@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <!-- Background gradient: deep charcoal -->
+    <linearGradient id="nsf-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0b0d14"/>
+      <stop offset="50%" stop-color="#0e1120"/>
+      <stop offset="100%" stop-color="#0b0d14"/>
+    </linearGradient>
+    <!-- Pulse glow filter -->
+    <filter id="nsf-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="nsf-glow-sm" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Axon gradient amber -->
+    <linearGradient id="nsf-amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.1"/>
+    </linearGradient>
+    <!-- Axon gradient cyan -->
+    <linearGradient id="nsf-cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.1"/>
+    </linearGradient>
+    <!-- Axon gradient violet -->
+    <linearGradient id="nsf-violet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#nsf-bg)"/>
+
+  <!-- ======================== NEURON SOMA BODIES ======================== -->
+  <!-- Left neuron cluster (soma + dendrites) -->
+  <!-- Soma 1 at (70, 30) -->
+  <circle cx="70" cy="30" r="8" fill="#1a1f35" stroke="#f59e0b" stroke-width="1.5" filter="url(#nsf-glow-sm)">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.1s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Dendrites from soma 1 -->
+  <line x1="70" y1="30" x2="50" y2="15" stroke="#f59e0b" stroke-width="0.8" stroke-opacity="0.35"/>
+  <line x1="70" y1="30" x2="55" y2="45" stroke="#f59e0b" stroke-width="0.8" stroke-opacity="0.35"/>
+  <line x1="70" y1="30" x2="42" y2="30" stroke="#f59e0b" stroke-width="0.8" stroke-opacity="0.35"/>
+  <line x1="70" y1="30" x2="52" y2="22" stroke="#f59e0b" stroke-width="0.6" stroke-opacity="0.22"/>
+
+  <!-- Soma 2 at (55, 85) -->
+  <circle cx="55" cy="85" r="6" fill="#1a1f35" stroke="#06b6d4" stroke-width="1.5" filter="url(#nsf-glow-sm)">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" begin="0.4s" repeatCount="indefinite"/>
+  </circle>
+  <line x1="55" y1="85" x2="35" y2="78" stroke="#06b6d4" stroke-width="0.8" stroke-opacity="0.35"/>
+  <line x1="55" y1="85" x2="38" y2="98" stroke="#06b6d4" stroke-width="0.8" stroke-opacity="0.35"/>
+  <line x1="55" y1="85" x2="32" y2="88" stroke="#06b6d4" stroke-width="0.6" stroke-opacity="0.22"/>
+
+  <!-- Soma 3 at (100, 65) internal connector -->
+  <circle cx="100" cy="65" r="5" fill="#1a1f35" stroke="#a78bfa" stroke-width="1.2" filter="url(#nsf-glow-sm)">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.4s" begin="0.7s" repeatCount="indefinite"/>
+  </circle>
+  <line x1="100" y1="65" x2="82" y2="58" stroke="#a78bfa" stroke-width="0.7" stroke-opacity="0.3"/>
+  <line x1="100" y1="65" x2="85" y2="76" stroke="#a78bfa" stroke-width="0.7" stroke-opacity="0.3"/>
+
+  <!-- ======================== AXON PATHS (horizontal nerve fibres) ======================== -->
+  <!-- Axon 1: Soma1 → right cluster (amber, top lane y=28) -->
+  <path d="M78 30 C 130 30, 160 28, 200 28" stroke="#f59e0b" stroke-width="1.2" fill="none" stroke-opacity="0.25"/>
+  <path d="M200 28 C 260 28, 310 26, 360 28" stroke="#f59e0b" stroke-width="1.2" fill="none" stroke-opacity="0.25"/>
+  <path d="M360 28 C 410 28, 460 26, 520 28" stroke="#f59e0b" stroke-width="1.2" fill="none" stroke-opacity="0.2"/>
+  <path d="M520 28 C 580 28, 640 26, 700 28" stroke="#f59e0b" stroke-width="1.2" fill="none" stroke-opacity="0.18"/>
+
+  <!-- Axon 2: Soma2 → right cluster (cyan, mid-low lane y=85) -->
+  <path d="M61 85 C 120 85, 160 88, 200 86" stroke="#06b6d4" stroke-width="1.2" fill="none" stroke-opacity="0.25"/>
+  <path d="M200 86 C 260 85, 310 88, 370 86" stroke="#06b6d4" stroke-width="1.2" fill="none" stroke-opacity="0.25"/>
+  <path d="M370 86 C 430 86, 490 88, 545 86" stroke="#06b6d4" stroke-width="1.2" fill="none" stroke-opacity="0.2"/>
+  <path d="M545 86 C 600 85, 660 88, 710 86" stroke="#06b6d4" stroke-width="1.2" fill="none" stroke-opacity="0.18"/>
+
+  <!-- Axon 3: Soma3 → right cluster (violet, mid lane y=62) -->
+  <path d="M105 65 C 160 64, 200 62, 250 62" stroke="#a78bfa" stroke-width="1" fill="none" stroke-opacity="0.22"/>
+  <path d="M250 62 C 310 61, 370 62, 430 61" stroke="#a78bfa" stroke-width="1" fill="none" stroke-opacity="0.22"/>
+  <path d="M430 61 C 500 61, 570 63, 640 61" stroke="#a78bfa" stroke-width="1" fill="none" stroke-opacity="0.18"/>
+
+  <!-- ======================== SYNAPSE PULSE DOTS (traveling along axons) ======================== -->
+  <!-- Amber axon pulse 1 -->
+  <circle cx="0" cy="28" r="3.5" fill="#f59e0b" filter="url(#nsf-glow)" opacity="0.9">
+    <animateMotion dur="3.2s" repeatCount="indefinite" begin="0s">
+      <mpath xlink:href="#nsf-path-amber1"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="3.2s" repeatCount="indefinite" begin="0s"/>
+  </circle>
+  <path id="nsf-path-amber1" d="M78 30 C 130 30, 160 28, 200 28 C 260 28, 310 26, 360 28 C 410 28, 460 26, 520 28 C 580 28, 640 26, 700 28" fill="none"/>
+
+  <!-- Amber axon pulse 2 (offset) -->
+  <circle cx="0" cy="28" r="3" fill="#fbbf24" filter="url(#nsf-glow)" opacity="0.85">
+    <animateMotion dur="3.2s" repeatCount="indefinite" begin="1.6s">
+      <mpath xlink:href="#nsf-path-amber1"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;0.85;0.85;0" dur="3.2s" repeatCount="indefinite" begin="1.6s"/>
+  </circle>
+
+  <!-- Cyan axon pulse 1 -->
+  <circle cx="0" cy="86" r="3.5" fill="#06b6d4" filter="url(#nsf-glow)" opacity="0.9">
+    <animateMotion dur="2.8s" repeatCount="indefinite" begin="0.5s">
+      <mpath xlink:href="#nsf-path-cyan1"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="2.8s" repeatCount="indefinite" begin="0.5s"/>
+  </circle>
+  <path id="nsf-path-cyan1" d="M61 85 C 120 85, 160 88, 200 86 C 260 85, 310 88, 370 86 C 430 86, 490 88, 545 86 C 600 85, 660 88, 710 86" fill="none"/>
+
+  <!-- Cyan axon pulse 2 (offset) -->
+  <circle cx="0" cy="86" r="2.8" fill="#22d3ee" filter="url(#nsf-glow)" opacity="0.85">
+    <animateMotion dur="2.8s" repeatCount="indefinite" begin="1.9s">
+      <mpath xlink:href="#nsf-path-cyan1"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;0.85;0.85;0" dur="2.8s" repeatCount="indefinite" begin="1.9s"/>
+  </circle>
+
+  <!-- Violet axon pulse 1 -->
+  <circle cx="0" cy="62" r="3" fill="#a78bfa" filter="url(#nsf-glow)" opacity="0.9">
+    <animateMotion dur="3.6s" repeatCount="indefinite" begin="0.9s">
+      <mpath xlink:href="#nsf-path-violet1"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="3.6s" repeatCount="indefinite" begin="0.9s"/>
+  </circle>
+  <path id="nsf-path-violet1" d="M105 65 C 160 64, 200 62, 250 62 C 310 61, 370 62, 430 61 C 500 61, 570 63, 640 61" fill="none"/>
+
+  <!-- ======================== RIGHT NEURON CLUSTER (target synapses) ======================== -->
+  <!-- Synaptic terminal knobs (right side) -->
+  <!-- Amber terminals -->
+  <circle cx="720" cy="28" r="5" fill="#1a1f35" stroke="#f59e0b" stroke-width="1.5" filter="url(#nsf-glow-sm)">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="1.9s" begin="0.3s" repeatCount="indefinite"/>
+  </circle>
+  <line x1="720" y1="28" x2="738" y2="18" stroke="#f59e0b" stroke-width="0.8" stroke-opacity="0.35"/>
+  <line x1="720" y1="28" x2="740" y2="30" stroke="#f59e0b" stroke-width="0.8" stroke-opacity="0.35"/>
+  <line x1="720" y1="28" x2="736" y2="40" stroke="#f59e0b" stroke-width="0.6" stroke-opacity="0.25"/>
+  <circle cx="745" cy="18" r="3" fill="#f59e0b" fill-opacity="0.5">
+    <animate attributeName="fill-opacity" values="0.2;0.7;0.2" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="748" cy="30" r="3" fill="#f59e0b" fill-opacity="0.5">
+    <animate attributeName="fill-opacity" values="0.2;0.7;0.2" dur="1.5s" begin="0.4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Cyan terminals -->
+  <circle cx="720" cy="86" r="5" fill="#1a1f35" stroke="#06b6d4" stroke-width="1.5" filter="url(#nsf-glow-sm)">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" begin="0.6s" repeatCount="indefinite"/>
+  </circle>
+  <line x1="720" y1="86" x2="738" y2="76" stroke="#06b6d4" stroke-width="0.8" stroke-opacity="0.35"/>
+  <line x1="720" y1="86" x2="740" y2="88" stroke="#06b6d4" stroke-width="0.8" stroke-opacity="0.35"/>
+  <line x1="720" y1="86" x2="735" y2="98" stroke="#06b6d4" stroke-width="0.6" stroke-opacity="0.25"/>
+  <circle cx="745" cy="76" r="3" fill="#06b6d4" fill-opacity="0.5">
+    <animate attributeName="fill-opacity" values="0.2;0.7;0.2" dur="1.7s" begin="0.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="748" cy="90" r="3" fill="#06b6d4" fill-opacity="0.5">
+    <animate attributeName="fill-opacity" values="0.2;0.7;0.2" dur="1.7s" begin="0.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Violet terminals -->
+  <circle cx="645" cy="61" r="5" fill="#1a1f35" stroke="#a78bfa" stroke-width="1.2" filter="url(#nsf-glow-sm)">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.5s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  <line x1="645" y1="61" x2="660" y2="52" stroke="#a78bfa" stroke-width="0.7" stroke-opacity="0.3"/>
+  <line x1="645" y1="61" x2="660" y2="70" stroke="#a78bfa" stroke-width="0.7" stroke-opacity="0.3"/>
+
+  <!-- ======================== SYNAPSE FLASH (receptor activation) ======================== -->
+  <!-- Amber receptor flash ring -->
+  <circle cx="720" cy="28" r="5" fill="none" stroke="#f59e0b" stroke-width="2" stroke-opacity="0">
+    <animate attributeName="r" values="5;14;14" dur="3.2s" repeatCount="indefinite" begin="3s"/>
+    <animate attributeName="stroke-opacity" values="0;0.8;0" dur="3.2s" repeatCount="indefinite" begin="3s"/>
+  </circle>
+  <!-- Cyan receptor flash ring -->
+  <circle cx="720" cy="86" r="5" fill="none" stroke="#06b6d4" stroke-width="2" stroke-opacity="0">
+    <animate attributeName="r" values="5;14;14" dur="2.8s" repeatCount="indefinite" begin="3.2s"/>
+    <animate attributeName="stroke-opacity" values="0;0.8;0" dur="2.8s" repeatCount="indefinite" begin="3.2s"/>
+  </circle>
+
+  <!-- ======================== INTERNEURON CONNECTORS (vertical cross-links) ======================== -->
+  <line x1="200" y1="28" x2="200" y2="86" stroke="#4b5563" stroke-width="0.5" stroke-opacity="0.3" stroke-dasharray="3,4"/>
+  <line x1="370" y1="28" x2="370" y2="86" stroke="#4b5563" stroke-width="0.5" stroke-opacity="0.25" stroke-dasharray="3,4"/>
+  <line x1="545" y1="28" x2="545" y2="86" stroke="#4b5563" stroke-width="0.5" stroke-opacity="0.2" stroke-dasharray="3,4"/>
+
+  <!-- ======================== TEXT OVERLAY ======================== -->
+  <!-- Dark backing for legibility -->
+  <rect x="170" y="32" width="460" height="58" rx="6" fill="#000000" opacity="0.42"/>
+
+  <text x="400" y="63" font-family="'Segoe UI',sans-serif" font-size="27" font-weight="700"
+        fill="#f1f5f9" text-anchor="middle" letter-spacing="3">
+    Masrik Dahir<animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  <text x="400" y="83" font-family="'Segoe UI',sans-serif" font-size="13"
+        fill="#06b6d4" text-anchor="middle" letter-spacing="2">
+    ✦ masrikdahir.com ✦<animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <radialGradient id="mfl-bg-grd" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0a0f1a"/>
+      <stop offset="100%" stop-color="#04080f"/>
+    </radialGradient>
+    <linearGradient id="mfl-arc-a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00e5ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mfl-arc-b" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffab40" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffab40" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#ffab40" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mfl-arc-c" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ce93d8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ce93d8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ce93d8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="mfl-glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="120" fill="url(#mfl-bg-grd)"/>
+  <circle cx="120" cy="60" r="14" fill="#00e5ff" opacity="0.12"><animate attributeName="opacity" values="0.08;0.2;0.08" dur="3s" repeatCount="indefinite"/></circle>
+  <circle cx="120" cy="60" r="7" fill="#00e5ff" opacity="0.4"><animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/></circle>
+  <circle cx="680" cy="60" r="14" fill="#ffab40" opacity="0.12"><animate attributeName="opacity" values="0.08;0.2;0.08" dur="3s" begin="1.5s" repeatCount="indefinite"/></circle>
+  <circle cx="680" cy="60" r="7" fill="#ffab40" opacity="0.4"><animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" begin="1.5s" repeatCount="indefinite"/></circle>
+  <path d="M120,60 C200,10 600,10 680,60" fill="none" stroke="url(#mfl-arc-a)" stroke-width="1.4" opacity="0.7" filter="url(#mfl-glow)" stroke-dasharray="600" stroke-dashoffset="600"><animate attributeName="stroke-dashoffset" values="600;0;600" dur="4s" repeatCount="indefinite"/></path>
+  <path d="M120,60 C200,28 600,28 680,60" fill="none" stroke="url(#mfl-arc-b)" stroke-width="1.2" opacity="0.65" filter="url(#mfl-glow)" stroke-dasharray="560" stroke-dashoffset="560"><animate attributeName="stroke-dashoffset" values="560;0;560" dur="4s" begin="0.5s" repeatCount="indefinite"/></path>
+  <path d="M120,60 C180,42 620,42 680,60" fill="none" stroke="url(#mfl-arc-c)" stroke-width="1.0" opacity="0.55" filter="url(#mfl-glow)" stroke-dasharray="530" stroke-dashoffset="530"><animate attributeName="stroke-dashoffset" values="530;0;530" dur="4s" begin="1s" repeatCount="indefinite"/></path>
+  <path d="M120,60 C200,110 600,110 680,60" fill="none" stroke="url(#mfl-arc-a)" stroke-width="1.4" opacity="0.7" filter="url(#mfl-glow)" stroke-dasharray="600" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" values="0;600;0" dur="4s" begin="2s" repeatCount="indefinite"/></path>
+  <path d="M120,60 C200,92 600,92 680,60" fill="none" stroke="url(#mfl-arc-b)" stroke-width="1.2" opacity="0.65" filter="url(#mfl-glow)" stroke-dasharray="560" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" values="0;560;0" dur="4s" begin="2.5s" repeatCount="indefinite"/></path>
+  <path d="M120,60 C180,78 620,78 680,60" fill="none" stroke="url(#mfl-arc-c)" stroke-width="1.0" opacity="0.55" filter="url(#mfl-glow)" stroke-dasharray="530" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" values="0;530;0" dur="4s" begin="3s" repeatCount="indefinite"/></path>
+  <line x1="120" y1="60" x2="680" y2="60" stroke="#ffffff" stroke-width="0.8" opacity="0.2"><animate attributeName="opacity" values="0.12;0.3;0.12" dur="3.5s" repeatCount="indefinite"/></line>
+  <path id="mfl-top-path" d="M120,60 C200,10 600,10 680,60" fill="none" stroke="none"/>
+  <path id="mfl-bot-path" d="M680,60 C600,110 200,110 120,60" fill="none" stroke="none"/>
+  <circle r="3.5" fill="#00e5ff" filter="url(#mfl-glow)"><animateMotion dur="4s" repeatCount="indefinite"><mpath href="#mfl-top-path"/></animateMotion><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.05;0.15;0.85;1" dur="4s" repeatCount="indefinite"/></circle>
+  <circle r="3.5" fill="#ffab40" filter="url(#mfl-glow)"><animateMotion dur="4s" begin="2s" repeatCount="indefinite"><mpath href="#mfl-bot-path"/></animateMotion><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.05;0.15;0.85;1" dur="4s" begin="2s" repeatCount="indefinite"/></circle>
+  <rect x="220" y="28" width="360" height="62" rx="8" fill="#000000" opacity="0.45"/>
+  <text x="400" y="58" font-family="'Segoe UI',sans-serif" font-size="27" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="3">Masrik Dahir<animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/></text>
+  <text x="400" y="80" font-family="'Segoe UI',sans-serif" font-size="13" fill="#00e5ff" text-anchor="middle" letter-spacing="2">✦ masrikdahir.com ✦<animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/></text>
+</svg>

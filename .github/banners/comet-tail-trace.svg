@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <!-- Deep space background -->
+    <radialGradient id="ctt-bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#0a0a1a"/>
+      <stop offset="100%" stop-color="#000005"/>
+    </radialGradient>
+    <!-- Comet nucleus glow -->
+    <radialGradient id="ctt-nucleus" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffde0"/>
+      <stop offset="40%" stop-color="#ffd060"/>
+      <stop offset="100%" stop-color="#ff8c00" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Tail gradient: bright at nucleus, fade out -->
+    <linearGradient id="ctt-tail1" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#fffde0" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#7ed6f5" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#4ab3e8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#2256c0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ctt-tail2" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#ffd060" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#a0d8ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#2256c0" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="ctt-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="ctt-softglow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#ctt-bg)"/>
+
+  <!-- Star field: static tiny stars -->
+  <g fill="#ffffff" opacity="0.5">
+    <circle cx="12" cy="8" r="0.6"/><circle cx="55" cy="23" r="0.5"/>
+    <circle cx="90" cy="14" r="0.7"/><circle cx="130" cy="5" r="0.5"/>
+    <circle cx="170" cy="30" r="0.6"/><circle cx="210" cy="11" r="0.4"/>
+    <circle cx="250" cy="25" r="0.7"/><circle cx="290" cy="7" r="0.5"/>
+    <circle cx="330" cy="18" r="0.6"/><circle cx="370" cy="3" r="0.4"/>
+    <circle cx="410" cy="28" r="0.7"/><circle cx="450" cy="12" r="0.5"/>
+    <circle cx="490" cy="22" r="0.6"/><circle cx="530" cy="6" r="0.4"/>
+    <circle cx="570" cy="19" r="0.7"/><circle cx="610" cy="29" r="0.5"/>
+    <circle cx="650" cy="9" r="0.6"/><circle cx="690" cy="24" r="0.4"/>
+    <circle cx="730" cy="15" r="0.7"/><circle cx="770" cy="31" r="0.5"/>
+    <circle cx="25" cy="95" r="0.5"/><circle cx="75" cy="82" r="0.6"/>
+    <circle cx="115" cy="105" r="0.4"/><circle cx="155" cy="88" r="0.7"/>
+    <circle cx="195" cy="98" r="0.5"/><circle cx="235" cy="75" r="0.6"/>
+    <circle cx="275" cy="110" r="0.4"/><circle cx="315" cy="92" r="0.7"/>
+    <circle cx="355" cy="78" r="0.5"/><circle cx="395" cy="103" r="0.6"/>
+    <circle cx="435" cy="85" r="0.4"/><circle cx="475" cy="97" r="0.7"/>
+    <circle cx="515" cy="73" r="0.5"/><circle cx="555" cy="108" r="0.6"/>
+    <circle cx="595" cy="83" r="0.4"/><circle cx="635" cy="95" r="0.7"/>
+    <circle cx="675" cy="77" r="0.5"/><circle cx="715" cy="101" r="0.6"/>
+    <circle cx="755" cy="89" r="0.4"/><circle cx="795" cy="71" r="0.5"/>
+  </g>
+
+  <!-- Twinkling stars (opacity animation) -->
+  <g fill="#b8d4ff">
+    <circle cx="40" cy="55" r="1.0">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="60" r="0.8">
+      <animate attributeName="opacity" values="1;0.1;1" dur="3.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="50" r="1.1">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="460" cy="65" r="0.9">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="48" r="1.0">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="740" cy="57" r="0.8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Comet animation: travels right-to-left across y=38 -->
+  <g>
+    <!-- Main tail: wide polygon, moving with comet -->
+    <!-- Tail body (wide trapezoid shape that trails behind nucleus) -->
+    <ellipse cx="0" cy="38" rx="200" ry="7" fill="url(#ctt-tail1)" opacity="0.85">
+      <animateTransform attributeName="transform" type="translate"
+        values="-200,0; 950,0" dur="4.5s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0.85;0.85;0" keyTimes="0;0.05;0.5;0.95;1" dur="4.5s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- Secondary wider, fainter tail -->
+    <ellipse cx="-60" cy="38" rx="240" ry="10" fill="url(#ctt-tail2)" opacity="0.4">
+      <animateTransform attributeName="transform" type="translate"
+        values="-200,0; 950,0" dur="4.5s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.4;0.4;0.4;0" keyTimes="0;0.05;0.5;0.95;1" dur="4.5s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- Nucleus glow halo (soft) -->
+    <circle cx="0" cy="38" r="18" fill="url(#ctt-nucleus)" filter="url(#ctt-softglow)" opacity="0.6">
+      <animateTransform attributeName="transform" type="translate"
+        values="-200,0; 950,0" dur="4.5s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0.6;0.6;0" keyTimes="0;0.05;0.5;0.95;1" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Nucleus core (bright) -->
+    <circle cx="0" cy="38" r="5" fill="#fffde0" filter="url(#ctt-glow)">
+      <animateTransform attributeName="transform" type="translate"
+        values="-200,0; 950,0" dur="4.5s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.05;0.5;0.95;1" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Debris particle 1 -->
+    <circle cx="-30" cy="36" r="1.5" fill="#a0d8ff">
+      <animateTransform attributeName="transform" type="translate"
+        values="-200,0; 950,0" dur="4.5s" begin="0.1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0.6;0.9;0" keyTimes="0;0.06;0.5;0.94;1" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Debris particle 2 -->
+    <circle cx="-55" cy="40" r="1.2" fill="#7ed6f5">
+      <animateTransform attributeName="transform" type="translate"
+        values="-200,0; 950,0" dur="4.5s" begin="0.18s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0.5;0.7;0" keyTimes="0;0.07;0.5;0.93;1" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Debris particle 3 -->
+    <circle cx="-85" cy="35" r="1.0" fill="#ffd060">
+      <animateTransform attributeName="transform" type="translate"
+        values="-200,0; 950,0" dur="4.5s" begin="0.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0.4;0.6;0" keyTimes="0;0.08;0.5;0.92;1" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Second comet with delay and slightly different trajectory -->
+  <g>
+    <ellipse cx="0" cy="78" rx="160" ry="5" fill="url(#ctt-tail1)" opacity="0.6">
+      <animateTransform attributeName="transform" type="translate"
+        values="-200,0; 950,0" dur="5.8s" begin="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0.6;0.6;0" keyTimes="0;0.05;0.5;0.95;1" dur="5.8s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle cx="0" cy="78" r="4" fill="#fffde0" filter="url(#ctt-glow)">
+      <animateTransform attributeName="transform" type="translate"
+        values="-200,0; 950,0" dur="5.8s" begin="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.05;0.5;0.95;1" dur="5.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Text overlay with backdrop -->
+  <rect x="150" y="28" width="500" height="65" rx="8" fill="#000010" opacity="0.45"/>
+  <text x="400" y="58" font-family="'Segoe UI',sans-serif" font-size="27" font-weight="700"
+        fill="#e8f4ff" text-anchor="middle" letter-spacing="3">
+    Masrik Dahir<animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  <text x="400" y="82" font-family="'Segoe UI',sans-serif" font-size="13"
+        fill="#7ed6f5" text-anchor="middle" letter-spacing="2">
+    ✦ masrikdahir.com ✦<animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+</svg>

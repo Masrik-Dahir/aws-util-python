@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <linearGradient id="tcm-bg" x1="0" y1="0" x2="800" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="50%" stop-color="#0f1a2e"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="tcm-glow-green" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tcm-glow-amber" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#tcm-bg)"/>
+  <!-- Left test grid (5x6 matrix) -->
+  <!-- Row 1 -->
+  <rect x="25" y="12" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="0s" fill="freeze"/>
+  </rect>
+  <rect x="38" y="12" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="0.15s" fill="freeze"/>
+  </rect>
+  <rect x="51" y="12" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="0.3s" fill="freeze"/>
+  </rect>
+  <rect x="64" y="12" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="0.45s" fill="freeze"/>
+  </rect>
+  <rect x="77" y="12" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="0.6s" fill="freeze"/>
+  </rect>
+  <rect x="90" y="12" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="0.75s" fill="freeze"/>
+  </rect>
+  <!-- Row 2 -->
+  <rect x="25" y="25" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="0.9s" fill="freeze"/>
+  </rect>
+  <rect x="38" y="25" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="1.05s" fill="freeze"/>
+  </rect>
+  <rect x="51" y="25" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="1.2s" fill="freeze"/>
+  </rect>
+  <rect x="64" y="25" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="1.35s" fill="freeze"/>
+  </rect>
+  <rect x="77" y="25" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="1.5s" fill="freeze"/>
+  </rect>
+  <rect x="90" y="25" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#fbbf24;#fbbf24" dur="4s" begin="1.65s" fill="freeze"/>
+  </rect>
+  <!-- Row 3 -->
+  <rect x="25" y="38" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="1.8s" fill="freeze"/>
+  </rect>
+  <rect x="38" y="38" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="1.95s" fill="freeze"/>
+  </rect>
+  <rect x="51" y="38" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="2.1s" fill="freeze"/>
+  </rect>
+  <rect x="64" y="38" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="2.25s" fill="freeze"/>
+  </rect>
+  <rect x="77" y="38" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="2.4s" fill="freeze"/>
+  </rect>
+  <rect x="90" y="38" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="2.55s" fill="freeze"/>
+  </rect>
+  <!-- Row 4 -->
+  <rect x="25" y="51" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="2.7s" fill="freeze"/>
+  </rect>
+  <rect x="38" y="51" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="2.85s" fill="freeze"/>
+  </rect>
+  <rect x="51" y="51" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="3s" fill="freeze"/>
+  </rect>
+  <rect x="64" y="51" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="3.15s" fill="freeze"/>
+  </rect>
+  <rect x="77" y="51" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="3.3s" fill="freeze"/>
+  </rect>
+  <rect x="90" y="51" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="3.45s" fill="freeze"/>
+  </rect>
+  <!-- Row 5 -->
+  <rect x="25" y="64" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="3.6s" fill="freeze"/>
+  </rect>
+  <rect x="38" y="64" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="3.75s" fill="freeze"/>
+  </rect>
+  <rect x="51" y="64" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="3.9s" fill="freeze"/>
+  </rect>
+  <!-- Left label -->
+  <text x="60" y="95" font-family="'Segoe UI',sans-serif" font-size="8" fill="#64748b" text-anchor="middle" letter-spacing="1">TESTS</text>
+  <!-- Right test grid (5x6 matrix, mirrored) -->
+  <!-- Row 1 -->
+  <rect x="700" y="12" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="0.1s" fill="freeze"/>
+  </rect>
+  <rect x="713" y="12" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="0.25s" fill="freeze"/>
+  </rect>
+  <rect x="726" y="12" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="0.4s" fill="freeze"/>
+  </rect>
+  <rect x="739" y="12" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="0.55s" fill="freeze"/>
+  </rect>
+  <rect x="752" y="12" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="0.7s" fill="freeze"/>
+  </rect>
+  <rect x="765" y="12" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="0.85s" fill="freeze"/>
+  </rect>
+  <!-- Row 2 -->
+  <rect x="700" y="25" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="1s" fill="freeze"/>
+  </rect>
+  <rect x="713" y="25" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="1.15s" fill="freeze"/>
+  </rect>
+  <rect x="726" y="25" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="1.3s" fill="freeze"/>
+  </rect>
+  <rect x="739" y="25" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="1.45s" fill="freeze"/>
+  </rect>
+  <rect x="752" y="25" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="1.6s" fill="freeze"/>
+  </rect>
+  <rect x="765" y="25" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="1.75s" fill="freeze"/>
+  </rect>
+  <!-- Row 3 -->
+  <rect x="700" y="38" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="1.9s" fill="freeze"/>
+  </rect>
+  <rect x="713" y="38" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="2.05s" fill="freeze"/>
+  </rect>
+  <rect x="726" y="38" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#fbbf24;#fbbf24" dur="4s" begin="2.2s" fill="freeze"/>
+  </rect>
+  <rect x="739" y="38" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="2.35s" fill="freeze"/>
+  </rect>
+  <rect x="752" y="38" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="2.5s" fill="freeze"/>
+  </rect>
+  <rect x="765" y="38" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="2.65s" fill="freeze"/>
+  </rect>
+  <!-- Row 4 -->
+  <rect x="700" y="51" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="2.8s" fill="freeze"/>
+  </rect>
+  <rect x="713" y="51" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="2.95s" fill="freeze"/>
+  </rect>
+  <rect x="726" y="51" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="3.1s" fill="freeze"/>
+  </rect>
+  <rect x="739" y="51" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="3.25s" fill="freeze"/>
+  </rect>
+  <rect x="752" y="51" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="3.4s" fill="freeze"/>
+  </rect>
+  <rect x="765" y="51" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="3.55s" fill="freeze"/>
+  </rect>
+  <!-- Row 5 -->
+  <rect x="700" y="64" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="3.7s" fill="freeze"/>
+  </rect>
+  <rect x="713" y="64" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="3.85s" fill="freeze"/>
+  </rect>
+  <rect x="726" y="64" width="10" height="10" rx="2" fill="#1e293b" opacity="0.6">
+    <animate attributeName="fill" values="#1e293b;#22c55e;#22c55e" dur="4s" begin="4s" fill="freeze"/>
+  </rect>
+  <!-- Right label -->
+  <text x="740" y="95" font-family="'Segoe UI',sans-serif" font-size="8" fill="#64748b" text-anchor="middle" letter-spacing="1">MODULES</text>
+  <!-- Scanning line left grid -->
+  <rect x="22" y="10" width="82" height="2" rx="1" fill="#22c55e" opacity="0">
+    <animate attributeName="y" values="10;78;10" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.6;0.6;0" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Scanning line right grid -->
+  <rect x="697" y="10" width="82" height="2" rx="1" fill="#22c55e" opacity="0">
+    <animate attributeName="y" values="10;78;10" dur="4s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.6;0.6;0" dur="4s" begin="0.5s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Connecting pulse dots from left grid to center -->
+  <circle cx="110" cy="50" r="2" fill="#22c55e" opacity="0">
+    <animate attributeName="cx" values="110;350" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="110" cy="60" r="1.5" fill="#38bdf8" opacity="0">
+    <animate attributeName="cx" values="110;350" dur="1.8s" begin="0.4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0" dur="1.8s" begin="0.4s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Connecting pulse dots from right grid to center -->
+  <circle cx="690" cy="50" r="2" fill="#22c55e" opacity="0">
+    <animate attributeName="cx" values="690;450" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="690" cy="60" r="1.5" fill="#38bdf8" opacity="0">
+    <animate attributeName="cx" values="690;450" dur="1.8s" begin="0.4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0" dur="1.8s" begin="0.4s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Center dark overlay for text -->
+  <rect x="200" y="25" width="400" height="70" rx="10" fill="#000000" opacity="0.5"/>
+  <!-- Project name -->
+  <text x="400" y="52" font-family="'Segoe UI',sans-serif" font-size="30" font-weight="700"
+        fill="#e2e8f0" text-anchor="middle" letter-spacing="4">
+    aws-util<animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  <text x="400" y="80" font-family="'Segoe UI',sans-serif" font-size="12"
+        fill="#22c55e" text-anchor="middle" letter-spacing="1">
+    Production-grade Python AWS wrappers with typed results<animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+  <!-- Coverage percentage counter effect -->
+  <text x="400" y="108" font-family="'Courier New',monospace" font-size="10" fill="#22c55e" text-anchor="middle" opacity="0.4">
+    194 tests passed
+    <animate attributeName="opacity" values="0;0.5;0.5;0.3;0.5" dur="3s" repeatCount="indefinite"/>
+  </text>
+</svg>

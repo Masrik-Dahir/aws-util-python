@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="clg-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0b0c1a"/>
+      <stop offset="50%" stop-color="#0e1128"/>
+      <stop offset="100%" stop-color="#0b0c1a"/>
+    </linearGradient>
+    <!-- Node glow filters -->
+    <filter id="clg-glow-rose" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="clg-glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="clg-glow-amber" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#clg-bg)"/>
+
+  <!-- === LEFT CRYSTAL CLUSTER === -->
+  <!-- Lattice edges (left cluster) -->
+  <!-- Base triangle edges -->
+  <line x1="60" y1="90" x2="100" y2="70" stroke="#1a4a5a" stroke-width="0.8">
+    <animate attributeName="stroke-opacity" values="0;0.6;1;0.6;1" dur="4s" repeatCount="indefinite"/>
+  </line>
+  <line x1="100" y1="70" x2="140" y2="85" stroke="#1a4a5a" stroke-width="0.8">
+    <animate attributeName="stroke-opacity" values="0;0;0.6;1;0.6;1" dur="4s" begin="0.3s" repeatCount="indefinite"/>
+  </line>
+  <line x1="60" y1="90" x2="140" y2="85" stroke="#1a4a5a" stroke-width="0.8">
+    <animate attributeName="stroke-opacity" values="0;0;0;0.6;1" dur="4s" begin="0.6s" repeatCount="indefinite"/>
+  </line>
+  <!-- Upper facets -->
+  <line x1="100" y1="70" x2="115" y2="45" stroke="#2a2060" stroke-width="0.8">
+    <animate attributeName="stroke-opacity" values="0;0;0;0;0.7;1" dur="5s" begin="0.8s" repeatCount="indefinite"/>
+  </line>
+  <line x1="60" y1="90" x2="115" y2="45" stroke="#2a2060" stroke-width="0.7">
+    <animate attributeName="stroke-opacity" values="0;0;0;0;0;0.7;1" dur="5s" begin="1.1s" repeatCount="indefinite"/>
+  </line>
+  <line x1="140" y1="85" x2="115" y2="45" stroke="#2a2060" stroke-width="0.7">
+    <animate attributeName="stroke-opacity" values="0;0;0;0;0;0;0.7;1" dur="5s" begin="1.3s" repeatCount="indefinite"/>
+  </line>
+  <!-- Extended edges -->
+  <line x1="115" y1="45" x2="85" y2="25" stroke="#3a1060" stroke-width="0.6">
+    <animate attributeName="stroke-opacity" values="0;0.5;1;0.5" dur="3s" begin="1.6s" repeatCount="indefinite"/>
+  </line>
+  <line x1="115" y1="45" x2="150" y2="30" stroke="#3a1060" stroke-width="0.6">
+    <animate attributeName="stroke-opacity" values="0;0.5;1;0.5" dur="3s" begin="1.9s" repeatCount="indefinite"/>
+  </line>
+  <line x1="140" y1="85" x2="175" y2="75" stroke="#1a4a5a" stroke-width="0.7">
+    <animate attributeName="stroke-opacity" values="0;0.5;1;0.5" dur="3.5s" begin="2.2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="175" y1="75" x2="190" y2="50" stroke="#1a4a5a" stroke-width="0.6">
+    <animate attributeName="stroke-opacity" values="0;0.5;1;0.5" dur="3.5s" begin="2.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="150" y1="30" x2="190" y2="50" stroke="#3a1060" stroke-width="0.6">
+    <animate attributeName="stroke-opacity" values="0;0.5;1;0.5" dur="3.5s" begin="2.7s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Left cluster nodes -->
+  <!-- Base nodes grow -->
+  <circle cx="60" cy="90" r="0" fill="#f472b6" filter="url(#clg-glow-rose)">
+    <animate attributeName="r" values="0;3;3" dur="4s" begin="0s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.8;1" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="70" r="0" fill="#22d3ee" filter="url(#clg-glow-cyan)">
+    <animate attributeName="r" values="0;3;3" dur="4s" begin="0.3s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.8;1" dur="3.2s" begin="0.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="140" cy="85" r="0" fill="#f59e0b" filter="url(#clg-glow-amber)">
+    <animate attributeName="r" values="0;3;3" dur="4s" begin="0.6s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.8;1" dur="2.8s" begin="1.0s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Upper nodes -->
+  <circle cx="115" cy="45" r="0" fill="#a78bfa" filter="url(#clg-glow-rose)">
+    <animate attributeName="r" values="0;3.5;3.5" dur="5s" begin="1.0s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.7;1" dur="3.5s" begin="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="85" cy="25" r="0" fill="#22d3ee" filter="url(#clg-glow-cyan)">
+    <animate attributeName="r" values="0;2.5;2.5" dur="4s" begin="1.7s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.8;1" dur="3s" begin="2.0s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="150" cy="30" r="0" fill="#f472b6" filter="url(#clg-glow-rose)">
+    <animate attributeName="r" values="0;2.5;2.5" dur="4s" begin="2.0s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.8;1" dur="3.3s" begin="2.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="175" cy="75" r="0" fill="#f59e0b" filter="url(#clg-glow-amber)">
+    <animate attributeName="r" values="0;2.5;2.5" dur="4s" begin="2.3s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.8;1" dur="3.1s" begin="2.6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="190" cy="50" r="0" fill="#a78bfa" filter="url(#clg-glow-rose)">
+    <animate attributeName="r" values="0;2" dur="4s" begin="2.6s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.8;1" dur="2.9s" begin="2.9s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- === RIGHT CRYSTAL CLUSTER === -->
+  <!-- Base triangle edges (right) -->
+  <line x1="660" y1="90" x2="700" y2="70" stroke="#1a4a5a" stroke-width="0.8">
+    <animate attributeName="stroke-opacity" values="0;0.6;1;0.6;1" dur="4s" begin="0.4s" repeatCount="indefinite"/>
+  </line>
+  <line x1="700" y1="70" x2="740" y2="85" stroke="#1a4a5a" stroke-width="0.8">
+    <animate attributeName="stroke-opacity" values="0;0;0.6;1;0.6;1" dur="4s" begin="0.7s" repeatCount="indefinite"/>
+  </line>
+  <line x1="660" y1="90" x2="740" y2="85" stroke="#1a4a5a" stroke-width="0.8">
+    <animate attributeName="stroke-opacity" values="0;0;0;0.6;1" dur="4s" begin="1.0s" repeatCount="indefinite"/>
+  </line>
+  <!-- Upper facets (right) -->
+  <line x1="700" y1="70" x2="685" y2="45" stroke="#2a2060" stroke-width="0.8">
+    <animate attributeName="stroke-opacity" values="0;0;0;0;0.7;1" dur="5s" begin="1.2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="660" y1="90" x2="685" y2="45" stroke="#2a2060" stroke-width="0.7">
+    <animate attributeName="stroke-opacity" values="0;0;0;0;0;0.7;1" dur="5s" begin="1.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="740" y1="85" x2="685" y2="45" stroke="#2a2060" stroke-width="0.7">
+    <animate attributeName="stroke-opacity" values="0;0;0;0;0;0;0.7;1" dur="5s" begin="1.7s" repeatCount="indefinite"/>
+  </line>
+  <!-- Extended edges (right) -->
+  <line x1="685" y1="45" x2="715" y2="25" stroke="#3a1060" stroke-width="0.6">
+    <animate attributeName="stroke-opacity" values="0;0.5;1;0.5" dur="3s" begin="2.0s" repeatCount="indefinite"/>
+  </line>
+  <line x1="685" y1="45" x2="650" y2="30" stroke="#3a1060" stroke-width="0.6">
+    <animate attributeName="stroke-opacity" values="0;0.5;1;0.5" dur="3s" begin="2.3s" repeatCount="indefinite"/>
+  </line>
+  <line x1="660" y1="90" x2="625" y2="75" stroke="#1a4a5a" stroke-width="0.7">
+    <animate attributeName="stroke-opacity" values="0;0.5;1;0.5" dur="3.5s" begin="2.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="625" y1="75" x2="610" y2="50" stroke="#1a4a5a" stroke-width="0.6">
+    <animate attributeName="stroke-opacity" values="0;0.5;1;0.5" dur="3.5s" begin="2.8s" repeatCount="indefinite"/>
+  </line>
+  <line x1="650" y1="30" x2="610" y2="50" stroke="#3a1060" stroke-width="0.6">
+    <animate attributeName="stroke-opacity" values="0;0.5;1;0.5" dur="3.5s" begin="3.0s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Right cluster nodes -->
+  <circle cx="660" cy="90" r="0" fill="#22d3ee" filter="url(#clg-glow-cyan)">
+    <animate attributeName="r" values="0;3;3" dur="4s" begin="0.4s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.8;1" dur="3s" begin="0.9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="70" r="0" fill="#f472b6" filter="url(#clg-glow-rose)">
+    <animate attributeName="r" values="0;3;3" dur="4s" begin="0.7s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.8;1" dur="3.2s" begin="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="740" cy="85" r="0" fill="#f59e0b" filter="url(#clg-glow-amber)">
+    <animate attributeName="r" values="0;3;3" dur="4s" begin="1.0s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.8;1" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="685" cy="45" r="0" fill="#a78bfa" filter="url(#clg-glow-rose)">
+    <animate attributeName="r" values="0;3.5;3.5" dur="5s" begin="1.4s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.7;1" dur="3.5s" begin="1.9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="715" cy="25" r="0" fill="#f472b6" filter="url(#clg-glow-rose)">
+    <animate attributeName="r" values="0;2.5;2.5" dur="4s" begin="2.1s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.8;1" dur="3s" begin="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="650" cy="30" r="0" fill="#22d3ee" filter="url(#clg-glow-cyan)">
+    <animate attributeName="r" values="0;2.5;2.5" dur="4s" begin="2.4s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.8;1" dur="3.3s" begin="2.7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="625" cy="75" r="0" fill="#f59e0b" filter="url(#clg-glow-amber)">
+    <animate attributeName="r" values="0;2.5;2.5" dur="4s" begin="2.6s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.8;1" dur="3.1s" begin="2.9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="610" cy="50" r="0" fill="#a78bfa" filter="url(#clg-glow-rose)">
+    <animate attributeName="r" values="0;2" dur="4s" begin="2.9s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;1;0.8;1" dur="2.9s" begin="3.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Traveling crystallisation pulse (left to center across top) -->
+  <circle cx="0" cy="60" r="3" fill="#f472b6" opacity="0" filter="url(#clg-glow-rose)">
+    <animate attributeName="cx" values="190;390" dur="3s" begin="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.8;0;0" dur="3s" begin="3s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Traveling crystallisation pulse (right to center) -->
+  <circle cx="800" cy="60" r="3" fill="#22d3ee" opacity="0" filter="url(#clg-glow-cyan)">
+    <animate attributeName="cx" values="610;410" dur="3s" begin="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.8;0;0" dur="3s" begin="3.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Text overlay -->
+  <rect x="240" y="30" width="320" height="65" rx="8" fill="#000000" opacity="0.4"/>
+
+  <text x="400" y="62" font-family="'Segoe UI',sans-serif" font-size="27" font-weight="700"
+        fill="#f8fafc" text-anchor="middle" letter-spacing="3">
+    Masrik Dahir
+    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  <text x="400" y="84" font-family="'Segoe UI',sans-serif" font-size="13"
+        fill="#a78bfa" text-anchor="middle" letter-spacing="2">
+    ✦ masrikdahir.com ✦
+    <animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+</svg>

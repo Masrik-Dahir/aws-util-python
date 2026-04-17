@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <!-- Deep slate background -->
+    <radialGradient id="rps-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a1020"/>
+      <stop offset="100%" stop-color="#060810"/>
+    </radialGradient>
+
+    <!-- Phosphor green glow filter -->
+    <filter id="rps-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="rps-glow-sm" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Sweep sector gradient (phosphor green fade) -->
+    <radialGradient id="rps-sweep-left" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rps-sweep-right" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Clip circles for left and right radar screens -->
+    <clipPath id="rps-clip-left">
+      <circle cx="100" cy="60" r="52"/>
+    </clipPath>
+    <clipPath id="rps-clip-right">
+      <circle cx="700" cy="60" r="52"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#rps-bg)"/>
+
+  <!-- ======================== LEFT RADAR SCREEN ======================== -->
+  <!-- Radar scope background -->
+  <circle cx="100" cy="60" r="52" fill="#030a04" stroke="#16a34a" stroke-width="1.2" stroke-opacity="0.6"/>
+
+  <!-- Concentric range rings -->
+  <circle cx="100" cy="60" r="13" fill="none" stroke="#16a34a" stroke-width="0.6" stroke-opacity="0.4"/>
+  <circle cx="100" cy="60" r="26" fill="none" stroke="#16a34a" stroke-width="0.6" stroke-opacity="0.35"/>
+  <circle cx="100" cy="60" r="39" fill="none" stroke="#16a34a" stroke-width="0.6" stroke-opacity="0.3"/>
+
+  <!-- Cross-hairs -->
+  <line x1="100" y1="8" x2="100" y2="112" stroke="#16a34a" stroke-width="0.5" stroke-opacity="0.3"/>
+  <line x1="48" y1="60" x2="152" y2="60" stroke="#16a34a" stroke-width="0.5" stroke-opacity="0.3"/>
+
+  <!-- Sweep arm (rotates full 360° every 3s) - rendered as a narrow wedge sector -->
+  <g clip-path="url(#rps-clip-left)">
+    <!-- Phosphor afterglow trailing sectors -->
+    <path d="M100,60 L100,8 A52,52 0 0,1 151,60 Z" fill="#22c55e" fill-opacity="0">
+      <animate attributeName="fill-opacity" values="0;0.18;0" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 100 60" to="360 100 60" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <!-- Primary sweep line (bright) -->
+    <line x1="100" y1="60" x2="100" y2="8" stroke="#4ade80" stroke-width="2" stroke-opacity="0.9" filter="url(#rps-glow)">
+      <animateTransform attributeName="transform" type="rotate" from="0 100 60" to="360 100 60" dur="3s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Blips (appear as sweep passes, then fade) -->
+  <!-- Blip at ~(120, 40) — blink in sync with sweep passing ~300° -->
+  <circle cx="120" cy="40" r="3.5" fill="#4ade80" filter="url(#rps-glow-sm)" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0.9;0.7;0.4;0.15;0" dur="3s" repeatCount="indefinite" begin="0.7s"/>
+  </circle>
+  <!-- Blip at ~(80, 82) — blink -->
+  <circle cx="80" cy="82" r="3" fill="#86efac" filter="url(#rps-glow-sm)" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.9;0.6;0.3;0.1;0;0" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+  </circle>
+  <!-- Blip at ~(138, 68) — blink -->
+  <circle cx="138" cy="68" r="2.5" fill="#4ade80" filter="url(#rps-glow-sm)" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;0.9;0.5;0.2;0" dur="3s" repeatCount="indefinite" begin="0.2s"/>
+  </circle>
+  <!-- Blip at ~(68, 38) — blink -->
+  <circle cx="68" cy="38" r="2" fill="#86efac" filter="url(#rps-glow-sm)" opacity="0">
+    <animate attributeName="opacity" values="0;0.9;0.5;0.2;0.05;0;0;0" dur="3s" repeatCount="indefinite" begin="2.2s"/>
+  </circle>
+
+  <!-- ======================== RIGHT RADAR SCREEN ======================== -->
+  <circle cx="700" cy="60" r="52" fill="#030a04" stroke="#16a34a" stroke-width="1.2" stroke-opacity="0.6"/>
+  <circle cx="700" cy="60" r="13" fill="none" stroke="#16a34a" stroke-width="0.6" stroke-opacity="0.4"/>
+  <circle cx="700" cy="60" r="26" fill="none" stroke="#16a34a" stroke-width="0.6" stroke-opacity="0.35"/>
+  <circle cx="700" cy="60" r="39" fill="none" stroke="#16a34a" stroke-width="0.6" stroke-opacity="0.3"/>
+  <line x1="700" y1="8" x2="700" y2="112" stroke="#16a34a" stroke-width="0.5" stroke-opacity="0.3"/>
+  <line x1="648" y1="60" x2="752" y2="60" stroke="#16a34a" stroke-width="0.5" stroke-opacity="0.3"/>
+
+  <!-- Sweep arm right (offset 1.5s so they're opposite phase) -->
+  <g clip-path="url(#rps-clip-right)">
+    <path d="M700,60 L700,8 A52,52 0 0,1 751,60 Z" fill="#22c55e" fill-opacity="0">
+      <animate attributeName="fill-opacity" values="0;0.18;0" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 700 60" to="360 700 60" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+    </path>
+    <line x1="700" y1="60" x2="700" y2="8" stroke="#4ade80" stroke-width="2" stroke-opacity="0.9" filter="url(#rps-glow)">
+      <animateTransform attributeName="transform" type="rotate" from="0 700 60" to="360 700 60" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+    </line>
+  </g>
+
+  <!-- Right blips -->
+  <circle cx="718" cy="44" r="3.5" fill="#4ade80" filter="url(#rps-glow-sm)" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0.9;0.6;0.3;0.1;0" dur="3s" repeatCount="indefinite" begin="2.2s"/>
+  </circle>
+  <circle cx="678" cy="78" r="3" fill="#86efac" filter="url(#rps-glow-sm)" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.9;0.5;0.2;0;0;0" dur="3s" repeatCount="indefinite" begin="2.9s"/>
+  </circle>
+  <circle cx="735" cy="62" r="2.5" fill="#4ade80" filter="url(#rps-glow-sm)" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;0.9;0.4;0.15;0" dur="3s" repeatCount="indefinite" begin="1.7s"/>
+  </circle>
+  <circle cx="685" cy="36" r="2" fill="#86efac" filter="url(#rps-glow-sm)" opacity="0">
+    <animate attributeName="opacity" values="0;0.9;0.4;0.1;0;0;0;0" dur="3s" repeatCount="indefinite" begin="3.6s"/>
+  </circle>
+
+  <!-- ======================== CENTRE CONNECTING DISPLAY ======================== -->
+  <!-- Scan line connecting two radars (pulsing horizontal beam) -->
+  <line x1="152" y1="60" x2="648" y2="60" stroke="#16a34a" stroke-width="0.7" stroke-opacity="0.2" stroke-dasharray="6,8"/>
+
+  <!-- Traveling ping dot on the center connector -->
+  <circle r="4" fill="#4ade80" filter="url(#rps-glow)" opacity="0.9">
+    <animateMotion dur="2s" repeatCount="indefinite" begin="0.3s">
+      <mpath xlink:href="#rps-center-line"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="2s" repeatCount="indefinite" begin="0.3s"/>
+  </circle>
+  <path id="rps-center-line" d="M152,60 L648,60" fill="none"/>
+
+  <!-- Return ping dot (right→left) -->
+  <circle r="3.5" fill="#86efac" filter="url(#rps-glow)" opacity="0.9">
+    <animateMotion dur="2s" repeatCount="indefinite" begin="1.3s">
+      <mpath xlink:href="#rps-center-line-rev"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="2s" repeatCount="indefinite" begin="1.3s"/>
+  </circle>
+  <path id="rps-center-line-rev" d="M648,60 L152,60" fill="none"/>
+
+  <!-- ======================== TEXT OVERLAY ======================== -->
+  <!-- Dark glass backing for legibility -->
+  <rect x="190" y="30" width="420" height="62" rx="7" fill="#000000" opacity="0.52"/>
+
+  <text x="400" y="61" font-family="'Segoe UI',sans-serif" font-size="30" font-weight="700"
+        fill="#f0fdf4" text-anchor="middle" letter-spacing="4">
+    aws-util<animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  <text x="400" y="83" font-family="'Segoe UI',sans-serif" font-size="12"
+        fill="#4ade80" text-anchor="middle" letter-spacing="1.5">
+    Multi-service AWS orchestration for Python<animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+</svg>

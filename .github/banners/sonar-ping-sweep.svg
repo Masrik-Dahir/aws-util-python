@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <radialGradient id="sps-bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#020810"/>
+    </radialGradient>
+    <radialGradient id="sps-ping" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#0077ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0077ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sps-glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="sps-softglow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="120" fill="url(#sps-bg)"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="30" x2="800" y2="30" stroke="#0d2a4a" stroke-width="0.4" opacity="0.5"/>
+  <line x1="0" y1="60" x2="800" y2="60" stroke="#0d2a4a" stroke-width="0.4" opacity="0.5"/>
+  <line x1="0" y1="90" x2="800" y2="90" stroke="#0d2a4a" stroke-width="0.4" opacity="0.5"/>
+  <line x1="200" y1="0" x2="200" y2="120" stroke="#0d2a4a" stroke-width="0.4" opacity="0.5"/>
+  <line x1="400" y1="0" x2="400" y2="120" stroke="#0d2a4a" stroke-width="0.4" opacity="0.5"/>
+  <line x1="600" y1="0" x2="600" y2="120" stroke="#0d2a4a" stroke-width="0.4" opacity="0.5"/>
+
+  <!-- Sonar origin: left side -->
+  <circle cx="72" cy="60" r="5" fill="#00e5ff" filter="url(#sps-softglow)">
+    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Center emitter dot -->
+  <circle cx="72" cy="60" r="2.5" fill="#ffffff"/>
+
+  <!-- Sonar ring 1 -->
+  <circle cx="72" cy="60" r="15" fill="none" stroke="#00e5ff" stroke-width="1.5" opacity="0">
+    <animate attributeName="r" values="5;120" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.9;0" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-width" values="2;0.3" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Sonar ring 2 (offset) -->
+  <circle cx="72" cy="60" r="15" fill="none" stroke="#0af" stroke-width="1.5" opacity="0">
+    <animate attributeName="r" values="5;120" dur="3.2s" begin="1.0s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0" dur="3.2s" begin="1.0s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-width" values="2;0.3" dur="3.2s" begin="1.0s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Sonar ring 3 (offset) -->
+  <circle cx="72" cy="60" r="15" fill="none" stroke="#00cfff" stroke-width="1" opacity="0">
+    <animate attributeName="r" values="5;120" dur="3.2s" begin="2.1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0" dur="3.2s" begin="2.1s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-width" values="1.5;0.2" dur="3.2s" begin="2.1s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Reflected dots at various distances (AWS services echoing back) -->
+  <!-- Echo 1: S3 at x=170 -->
+  <circle cx="170" cy="44" r="3.5" fill="#00e5ff" filter="url(#sps-glow)" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.9;0.7;0" dur="3.2s" begin="0.85s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="170" cy="44" r="1.5" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;0.5;0" dur="3.2s" begin="0.85s" repeatCount="indefinite"/>
+  </circle>
+  <text x="173" y="41" font-family="monospace" font-size="7" fill="#00e5ff" opacity="0">S3
+    <animate attributeName="opacity" values="0;0;0.8;0.5;0" dur="3.2s" begin="0.85s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Echo 2: DynamoDB at x=240 -->
+  <circle cx="240" cy="78" r="3.5" fill="#4df" filter="url(#sps-glow)" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0.9;0.7;0" dur="3.2s" begin="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="240" cy="78" r="1.5" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;1;0.5;0" dur="3.2s" begin="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="244" y="86" font-family="monospace" font-size="7" fill="#4df" opacity="0">DDB
+    <animate attributeName="opacity" values="0;0;0;0.8;0.5;0" dur="3.2s" begin="1.2s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Echo 3: IoT at x=310 -->
+  <circle cx="310" cy="35" r="3.5" fill="#a0f0ff" filter="url(#sps-glow)" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;0.9;0.7;0" dur="3.2s" begin="1.55s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="310" cy="35" r="1.5" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;1;0.5;0" dur="3.2s" begin="1.55s" repeatCount="indefinite"/>
+  </circle>
+  <text x="314" y="32" font-family="monospace" font-size="7" fill="#a0f0ff" opacity="0">IoT
+    <animate attributeName="opacity" values="0;0;0;0;0.8;0.5;0" dur="3.2s" begin="1.55s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Echo 4: SNS at x=370 -->
+  <circle cx="370" cy="90" r="3.5" fill="#00e5ff" filter="url(#sps-glow)" opacity="0">
+    <animate attributeName="opacity" values="0;0.9;0.6;0" dur="3.2s" begin="2.0s" repeatCount="indefinite"/>
+  </circle>
+  <text x="357" y="103" font-family="monospace" font-size="7" fill="#00e5ff" opacity="0">SNS
+    <animate attributeName="opacity" values="0;0.8;0.5;0" dur="3.2s" begin="2.0s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Echo 5: Lambda at x=450 -->
+  <circle cx="450" cy="25" r="3.5" fill="#4df" filter="url(#sps-glow)" opacity="0">
+    <animate attributeName="opacity" values="0;0.9;0.6;0" dur="3.2s" begin="2.3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="437" y="23" font-family="monospace" font-size="7" fill="#4df" opacity="0">λ
+    <animate attributeName="opacity" values="0;0.8;0.5;0" dur="3.2s" begin="2.3s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Sweeping scan line from emitter -->
+  <line x1="72" y1="60" x2="192" y2="60" stroke="#00e5ff" stroke-width="1" opacity="0.15">
+    <animate attributeName="opacity" values="0.15;0.05;0.15" dur="3.2s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Text overlay backdrop -->
+  <rect x="155" y="32" width="490" height="58" rx="6" fill="#020810" opacity="0.55"/>
+
+  <!-- Author text -->
+  <text x="400" y="54" font-family="'Segoe UI',sans-serif" font-size="27" font-weight="700"
+        fill="#e8f4ff" text-anchor="middle" letter-spacing="3">
+    Masrik Dahir<animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  <text x="400" y="78" font-family="'Segoe UI',sans-serif" font-size="13"
+        fill="#00e5ff" text-anchor="middle" letter-spacing="2">
+    ✦ masrikdahir.com ✦<animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.8s" fill="freeze"/>
+  </text>
+
+  <!-- Right-side sonar origin (secondary emitter) -->
+  <circle cx="728" cy="60" r="4" fill="#0077ff" filter="url(#sps-softglow)">
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="728" cy="60" r="2" fill="#a0d8ff"/>
+  <!-- ring from right -->
+  <circle cx="728" cy="60" r="5" fill="none" stroke="#0077ff" stroke-width="1" opacity="0">
+    <animate attributeName="r" values="5;80" dur="2.8s" begin="0.6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0" dur="2.8s" begin="0.6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="728" cy="60" r="5" fill="none" stroke="#00a0ff" stroke-width="0.8" opacity="0">
+    <animate attributeName="r" values="5;80" dur="2.8s" begin="1.9s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0" dur="2.8s" begin="1.9s" repeatCount="indefinite"/>
+  </circle>
+</svg>
