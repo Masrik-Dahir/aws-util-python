@@ -64,6 +64,7 @@
 - [Async Usage](#async-usage)
 - [Testing](#testing)
 - [CI / CD](#ci--cd)
+- [Developer Documentation](#developer-documentation)
 - [Contributing](#contributing)
 - [License](#license)
 - [Changelog](#changelog)
@@ -631,6 +632,26 @@ pipenv run task publish:major
 # Bump to a specific version
 pipenv run task "publish:v" 3.0.0
 ```
+
+---
+
+## Developer Documentation
+
+Complete API reference documentation with syntax-highlighted signatures,
+searchable sidebar navigation, and cross-linked type definitions is available
+for all 7 language implementations:
+
+| Language | API Reference | Package |
+|----------|--------------|---------|
+| Python | [masrikdahir.com/.../python](https://www.masrikdahir.com/library/awsutil/python.html) | [PyPI](https://pypi.org/project/aws-util/) |
+| C# | [masrikdahir.com/.../csharp](https://www.masrikdahir.com/library/awsutil/csharp.html) | [NuGet](https://www.nuget.org/packages/AwsUtil/) |
+| Go | [masrikdahir.com/.../go](https://www.masrikdahir.com/library/awsutil/go.html) | [Go Pkg](https://pkg.go.dev/github.com/masrik-dahir/aws-util-go) |
+| Java | [masrikdahir.com/.../java](https://www.masrikdahir.com/library/awsutil/java.html) | [Maven](https://central.sonatype.com/artifact/com.masrikdahir/awsutil) |
+| Rust | [masrikdahir.com/.../rust](https://www.masrikdahir.com/library/awsutil/rust.html) | [Crates.io](https://crates.io/crates/aws-util) |
+| TypeScript | [masrikdahir.com/.../typescript](https://www.masrikdahir.com/library/awsutil/typescript.html) | [npm](https://www.npmjs.com/package/aws-util) |
+| Ruby | [masrikdahir.com/.../ruby](https://www.masrikdahir.com/library/awsutil/ruby.html) | [RubyGems](https://rubygems.org/gems/aws-util) |
+
+Browse all languages from the [AwsUtil landing page](https://www.masrikdahir.com/library/awsutil.html).
 
 ---
 

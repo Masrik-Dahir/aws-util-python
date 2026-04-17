@@ -6,7 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+- **`pypi-doc` skill** — new SKILLS submodule skill that generates a curated `PYPI_README.md` for PyPI by selectively pulling content from README.md and the developer docs site, stripping GitHub-specific elements (SVG banners, Mermaid diagrams) that don't render on PyPI
+- **`PYPI_README.md`** — curated PyPI package description with badges, TL;DR, code examples, feature tables, architecture overview, module reference, and prominent links to the full developer documentation at masrikdahir.com
+- **Developer Documentation section in README.md** — links to API reference for all 7 language implementations with package registry links
+
 ### Changed
+- **`pyproject.toml`** — `readme` field now points to `PYPI_README.md` instead of `README.md`; added `Documentation` URL to `[project.urls]`
+- **Updated git interaction rules in CLAUDE.md** — replaced "never commit or push" with "always ask before commit/push", added rule requiring git author to be `Masrik Dahir <info@masrikdahir.com>` (no AI co-author headers), applied to all 7 companion project CLAUDE.md files
 - **Test directory reorganization** — moved all unit tests from `tests/` root into `tests/unit/` and kept integration tests in `tests/integration/`, creating a clean `tests/unit/` + `tests/integration/` layout. Updated `pyproject.toml` task commands (`test`, `test-cov`, `mutation-test`) to target `tests/unit/`, added `test-integ` and `test-all` commands, updated `testpaths` to `["tests/unit", "tests/integration"]`
 
 ### Added

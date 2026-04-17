@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "aws-util"
 version = "2.3.0"
 description = "A utility library for common AWS services"
-readme = "README.md"
+readme = "PYPI_README.md"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "Masrik Dahir", email = "info@masrikdahir.com" }]
@@ -29,6 +29,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://www.masrikdahir.com"
+Documentation = "https://www.masrikdahir.com/library/awsutil/python.html"
 Source = "https://github.com/Masrik-Dahir/aws-util-python"
 Tracker = "https://github.com/Masrik-Dahir/aws-util-python/issues"
 
