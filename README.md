@@ -735,7 +735,7 @@ def my_function(
 
 | Version | Date | Changes |
 |---------|------|---------|
-| v2.2.10 | 2026-04-16 | 283 unit tests for 17 missing functions across 5 modules (100% function coverage) |
+| v2.3.0 | 2026-04-16 | 283 unit tests for 17 missing functions across 5 modules (100% function coverage) |
 | v2.2.9 | 2026-04-15 | 100 new multi-service orchestration functions across 20 modules |
 | v2.2.7 | 2026-04-09 | Scoped CI workflows to s3 module |
 | v2.2.6 | 2026-04-08 | 6,189 new boto3 method wrappers (100% API coverage) |
