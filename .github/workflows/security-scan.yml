@@ -29,7 +29,7 @@ jobs:
         run: bandit -r src/ -f json -o bandit-report.json --severity-level medium || true
 
       - name: Upload bandit report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: bandit-report
           path: bandit-report.json
@@ -58,7 +58,7 @@ jobs:
         run: pip-audit --format json --output pip-audit-report.json || true
 
       - name: Upload audit report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pip-audit-report
           path: pip-audit-report.json

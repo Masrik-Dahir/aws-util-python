@@ -26,7 +26,7 @@ jobs:
 
       - name: Upload build artifacts
         # Saves the generated files so you can inspect them or pass them to a publish job
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: package-distributions
           path: dist/
